@@ -1,0 +1,16 @@
+#lnb.fixed {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: #9ff;
+  border-bottom: 2px solid red;
+}
+
+#lnb.fixed a {
+  color: #000;
+}
+
+#lnb.fixed a:hover {
+  background-color: #000;
+  color: #9ff;
+}

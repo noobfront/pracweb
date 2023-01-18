@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>06-4_폼_textarea+select</title>
+</head>
+
+<body>
+    <h2>textarea요소와 select요소</h2>
+    <form>
+        <fieldset>
+            <legend>여러 줄 글상자와 목록상자</legend>
+            <p>답글<br><textarea cols="40" rows="5">
+           </textarea>
+                <!--cols는 가로 글자수, rows는 세로 행 - 내용이 rows의 크기를 초과하면 스크롤바 자동으로 생성됨-->
+                <!-- textarea는 <br태그> 또는 <p태그> 밖에다가-->
+            </p>
+            <p>
+                과목선택
+                <select>
+                    <!--select안에 option(개별항목) 설정-->
+                    <option>HTML</option>
+                    <option>CSS</option>
+                    <option>jQuery</option>
+                </select>
+            </p>
+            <p>개강일
+                <select>
+                    <!--optgroup은 option을 묶는 요소, label은 이름표-->
+                    <optgroup label="3월">
+                        <option>3월 7일</option>
+                        <option>3월 14일</option>
+                        <option>3월 21일</option>
+                        <option>3월 28일</option>
+                    </optgroup>
+                    <optgroup label="4월">
+                        <option>4월 4일</option>
+                        <option>4월 11일</option>
+                    </optgroup>
+                </select>
+            </p>
+        </fieldset>
+    </form>
+</body>
+
+</html>

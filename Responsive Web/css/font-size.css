@@ -1,0 +1,70 @@
+section {
+  font-size: 32px;
+}
+
+html {
+  font-size: 24px;
+}
+
+section {
+  font-size: 32px;
+}
+
+p {
+  color: red;
+}
+
+.px {
+  font-size: 16px;
+}
+
+.percent {
+  font-size: 100%;
+}
+
+.em {
+  font-size: 1em;
+}
+
+.rem {
+  font-size: 1rem;
+}
+
+
+.ex {
+  font-size: 16px;
+}
+
+.ex h3 {
+  margin-top: 50px;
+}
+
+.ex ul {
+  padding: 20px;
+  background-color: aqua;
+}
+
+.ex li {
+  list-style: none;
+}
+
+.main {
+  font: bold 2.4em/1.2 '맑은 고딕';
+  text-align: center;
+  letter-spacing: -0.1em;
+}
+
+.sub {
+  font: 1.4em/1.2 '바탕';
+  text-align: center;
+}
+
+.body {
+  font: 1em/1.8 '맑은 고딕';
+  margin: 20px auto;
+  text-align: justify;
+}
+
+.note {
+  font: 0.8em/1.4 '맑은 고딕';
+}

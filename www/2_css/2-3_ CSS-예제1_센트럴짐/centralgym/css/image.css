@@ -1,0 +1,349 @@
+@charset "utf-8";
+
+/****** 브라우저 초기화 및 전체 설정 ******/
+* {
+  margin: 0;
+  padding: 0;
+  color: #0cf;
+  text-align: center;
+  /*글자-가로정렬: 중앙*/
+  font-size: 12px;
+  /*글자크기: 기본설정은 a태그 기준 16px*/
+}
+
+li {
+  float: left;
+  /*왼쪽으로 이어붙이기*/
+  list-style: none;
+  /*점, 숫자 등 목록의 장식 제거*/
+}
+
+a {
+  text-decoration: none;
+  /*밑줄 등 글자의 장식 제거*/
+}
+
+#wrap {
+  width: auto;
+  /*기본적으로는 100%와 같음 - 단, 마진이나 보더를 포함하여 조정*/
+  background-image: url(../images/00_line.png);
+  /*배경이미지의 크기가 영역의 크기보다 작을 경우 반복하여 영역을 채움 - 기본설정*/
+  background-repeat: repeat-x;
+  /*가로로만 반복 - 기본설정은 가로세로 반복*/
+}
+
+
+
+
+
+/****** 헤더 영역 ******/
+#header {
+  width: 1000px;
+  height: 120px;
+  /*** 가로 중앙 정렬 ***/
+  margin: 0 auto;
+  /*값을 두 개 이상 입력하면 1.위 2.오른쪽 3.아래 4.왼쪽 (미입력 값은 대칭과 도일)*/
+  /*1.위/아래는 0, 2.좌/우는 균등분할*/
+}
+
+/*#header의 자녀요소인 div*/
+#header > div {
+  float: left;
+  /*왼쪽으로 이어붙이기 - 가로분할 되는 모든 요소에 적용*/
+}
+
+#header_left {
+  width: 400px;
+  height: 120px;
+}
+
+#left_top {
+  width: 400px;
+  height: 60px;
+}
+
+#left_lnb {
+  width: 400px;
+  height: 60px;
+}
+
+#left_lnb > ul {
+  width: 400px;
+  height: 60px;
+}
+
+#left_lnb > ul > li {
+  width: 80px;
+  height: 60px;
+  background-image: url(../images/01_menu_left.jpg);
+}
+
+.left1 {
+  background-position: 0 0;
+}
+
+d
+
+#left_lnb > ul > li > a {
+  display: block;
+  /*크기적용을 위해 설정*/
+  height: 100%;
+  text-indent: -9999px;
+  /*글자의 시각정보만 브라우저의 왼쪽으로 이동*/
+}
+
+#logo {
+  width: 204px;
+  height: 120px;
+  background-image: url(../images/02_top_logo.jpg);
+  background-position: 0 0;
+  /*배경이미지-위치: X값 Y값 - 기본값은 각각 0*/
+}
+
+/*
+사용자 동작에 반응하는 가상클래스 - 선택자의 속성은 그대로, 추가설정만 적용
+
+선택자:hover - 선택자를 마우스오버했을 때의 스타일을 지정
+선택자:active - 선택자를 클릭한 상태(누르고 있을 때)의 스타일을 지정
+선택자:focus - (탭키 등으로) 선택자를 활성화했을 때의 스타일을 지정
+선택자:link - 하이퍼링크 속성이 적용된 요소의 스타일을 지정 (선택자의 기본설정과 같아서 주로 생략)
+선택자:visited - 하이퍼링크 속성이 적용된 태그를 클릭하여 방문하고 돌아왔을 때의 스타일을 지정
+*/
+
+#logo:hover {
+  background-position: 0 -120px;
+}
+
+#logo > h1 {
+  height: 100%;
+  /*부모요소인 #logo의 100%*/
+}
+
+#logo > h1 > a {
+  display: block;
+  /*크기적용을 위해 변환 - width:100% 자동*/
+  height: 100%;
+  /*부모요소인 h1의 100%*/
+  text-indent: -9999px;
+  /*글자의 시각적 위치만 브라우저 왼쪽으로 이동*/
+}
+
+#header_right {
+  width: 396px;
+  height: 120px;
+}
+
+#right_top {
+  width: 396px;
+  height: 60px;
+}
+
+#gnb {
+  width: 266px;
+  /*ul태그의 border-left 포함*/
+  height: 20px;
+  float: right;
+  margin-top: 10px;
+  /*외부여백-상단*/
+}
+
+#gnb > ul {
+  width: 264px;
+  height: 20px;
+  border-left: 2px solid #0cf;
+}
+
+#gnb > ul > li {
+  width: 64px;
+  height: 20px;
+  border-right: 2px solid #0cf;
+}
+
+#gnb > ul > li > a {
+  display: block;
+  /*크기적용을 위해 설정*/
+  height: 100%;
+  line-height: 20px;
+  /*행간 - 글이 1행일 때 height와 같게 설정하면 세로 중아 정렬*/
+  /*heigh값이 없을 때 height를 대체*/
+}
+
+#right_lnb {
+  width: 396px;
+  height: 60px;
+}
+
+#right_lnb > ul {
+  width: 396px;
+  height: 60px;
+}
+
+#right_lnb > ul > li {
+  width: 66px;
+  height: 60px;
+  background-image: url(../images/03_menu_right.jpg);
+}
+
+.right1 {
+  background-position: 0 0;
+}
+
+.right1:hover {
+  background-position: 0 -60px;
+}
+
+.right2 {
+  background-position: -66px 0;
+}
+
+.right2:hover {
+  background-position: -66px -60px;
+}
+
+.right3 {
+  background-position: -132px 0;
+}
+
+.right3:hover {
+  background-position: -132px -60px;
+}
+
+.right4 {
+  background-position: -198px 0;
+}
+
+.right4:hover {
+  background-position: -198px -60px;
+}
+
+.right5 {
+  background-position: -264px 0;
+}
+
+.right5:hover {
+  background-position: -264px -60px;
+}
+
+.right6 {
+  background-position: -330px 0;
+}
+
+.right6:hover {
+  background-position: -330px -60px;
+}
+
+#right_lnb > ul > li > a {
+  display: block;
+  height: 100%;
+  text-indent: -9999px;
+  /*글자의 시각정보만 브라우저 왼쪽으로 이동 - 꼭 필요한 곳에만 사용*/
+}
+
+
+
+
+
+/****** 콘텐츠 영역 ******/
+#contentwrap {
+  width: 1000px;
+  height: 667px;
+  margin: 0 auto;
+}
+
+
+
+
+
+/****** 푸터 영역 ******/
+#footer {
+  width: auto;
+  height: 100px;
+  background-image: url(../images/99_bottom_line.png);
+  background-repeat: repeat-x;
+  /*배경이미지-반복: 가로만 - 배경이미지는 가로세로 반복이 기본 설정*/
+}
+
+#fnb {
+  width: 1000px;
+  height: 50px;
+  margin: 0 auto;
+  /*블록요소의 가로 중앙 정렬*/
+}
+
+#fnb > ul {
+  width: 1000px;
+  height: 50px;
+}
+
+#fnb > ul > li {
+  width: 200px;
+  height: 50px;
+  background-image: url(../images/99_bottom_logo.jpg);
+}
+
+.fnb1 {
+  background-position: 0 0;
+}
+
+.fnb1:hover {
+  background-position: 0 -50px;
+}
+
+.fnb2 {
+  background-position: -200px 0;
+}
+
+.fnb2:hover {
+  background-position: -200px -50px;
+}
+
+.fnb3 {
+  background-position: -400px 0;
+}
+
+.fnb3:hover {
+  background-position: -400px -50px;
+}
+
+.fnb4 {
+  background-position: -600px 0;
+}
+
+.fnb4:hover {
+  background-position: -600px -50px;
+}
+
+.fnb5 {
+  background-position: -800px 0;
+}
+
+.fnb5:hover {
+  background-position: -800px -50px;
+}
+
+#fnb > ul > li h2 {
+  height: 100%;
+}
+
+#fnb > ul > li a {
+  display: block;
+  height: 100%;
+  text-indent: -9999px;
+}
+
+#address {
+  width: 1000px;
+  height: 50px;
+  margin: 0 auto;
+  /*블록요소의 중앙 정렬*/
+}
+
+address {
+  font-style: normal;
+  /*address태그의 기본설정은 italic*/
+}
+
+small {
+  font-size: 100%;
+  /*small태그의 기본설정은 약 85%*/
+}

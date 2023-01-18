@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>transform&amp;transition</title>
+  <link rel="stylesheet" href="css/css3_transform&transition.css" type="text/css">
+</head>
+
+<body>
+  <div id="wrap">
+    <header>
+      <h1>transform&amp;transition - p.325 / p.322</h1>
+      <p>transform은 변형 / transition은 과정</p>
+      <section>
+        <h2>transform 속성</h2>
+        <ul class="trans">
+          <li class="translate">
+            <h3>translate</h3>
+            <ul class="note">
+              <li>왼쪽 위를 기준으로 이동</li>
+              <li>transform: translate(X값,Y값)형식으로 입력</li>
+              <li>transform: translateX()<br>translateY() 둘로 나누어(띄어쓰기) 사용 가능</li>
+              <li>마이너스(-)값 사용 가능</li>
+            </ul>
+          </li>
+          <li class="rotate">
+            <h3>rotate</h3>
+            <ul class="note">
+              <li>시계방향으로 각도 회전</li>
+              <li>transform: rotate(수치deg)형식으로 입력</li>
+              <li>deg(degree) 단위 사용</li>
+              <li>마이너스(-) 값 사용 가능</li>
+            </ul>
+          </li>
+          <li class="scale">
+            <h3>scale</h3>
+            <ul class="note">
+              <li>중심을 기준으로 확대/축소</li>
+              <li>transform: scale(배수);<br>혹은 transform: scale(X배수,Y배수)형식으로 입력</li>
+              <li>transform: scaleX() scaleY() 둘로 나누어 사용</li>
+              <li>기준은 1(=100%)</li>
+            </ul>
+          </li>
+          <li class="skew">
+            <h3>skew</h3>
+            <ul class="note">
+              <li>중심을 기준으로 기울어짐</li>
+              <li>transform: skew(X값,Y값)형식으으로 입력 - 값을 하나만 입력 시 X값으로 인식</li>
+              <li>transform: skewX() skewY() 둘로 나누어 사용</li>
+              <li>deg(degree) 단위 사용</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>transform 속성 실습</h2>
+        <aside id="banner">
+          <h3>배너 모음</h3>
+          <ul>
+            <li class="translate1"><a href=""><img src="images/banner_01.jpg" alt="맞춤제작 배너"></a></li>
+            <li><a href=""><img src="images/banner_02.jpg" alt="평생수선보장 배너"></a></li>
+            <li><a href=""><img src="images/banner_03.jpg" alt="무료배송 배너"></a></li>
+            <li><a href=""><img src="images/banner_04.jpg" alt="포토 상품후기 배너"></a></li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <h2>position과 transform을 이용한 블록요소의 중앙정렬</h2>
+        <div class="outbox">
+          <div class="inbox">
+            <h3>중앙정렬</h3>
+           <ul>
+             <li>부모요소의 중앙으로 기준점을 이동</li>
+             <li>자신의 크기의 절반만큼 거꾸로 이동</li>
+           </ul>
+          </div>
+        </div>
+      </section>
+    </header>
+  </div>
+</body>
+
+</html>

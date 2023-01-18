@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title> 배열객체 </title>
+	<script>
+		var greenArr = ["교대", "방배", "강남"];
+		var yellowArr = ["미금", "정자", "수서"];
+
+		greenArr.splice(2, 1, "서초", "역삼"); //2번 인덱스부터 1개 데이터 삭제, 그 후 서초,역삼 삽입
+		console.log(greenArr);
+
+		var data1 = yellowArr.pop(); //yellowArr 배열 마지막 인덱스 데이터를 data1 저장
+		var data2 = yellowArr.shift(); //yellowArr 배열 가장 앞쪽 인덱스 데이터를 data2 저장
+
+		yellowArr.push(data2); //data2 저장된 데이터를 yellowArr배열 마지막 인덱스에 밀어넣음
+		console.log(yellowArr);
+
+		yellowArr.unshift(data1); //data1 저장된 데이터를 yellowArr배열 가장 앞쪽 인덱스에 밀어넣음
+		console.log(yellowArr);
+	</script>
+</head>
+
+<body>
+</body>
+
+</html>

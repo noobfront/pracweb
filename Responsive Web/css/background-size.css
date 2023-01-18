@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  margin: 20px;
+}
+
+li {
+  list-style: none;
+  margin: 20px;
+  border: 4px solid red;
+  height: 45vh;
+  font: bold 32px/45vh 'arial';
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0 10px red;
+  /* background-image: url(../img/0_background.jpg);
+  background-position: center;
+  background-color: #f99;
+  background-repeat: no-repeat;
+  background-attachment: fixed; */
+  background: url(../img/0_background.jpg) center #f99 no-repeat;
+}
+
+/* background-size는 개별 작성 */
+
+li:nth-child(1) {
+  background-size: cover;
+}
+
+li:nth-child(2) {
+  background-size: contain;
+}
+
+li:nth-child(3) {
+  background-size: 40vw;
+
+}
+
+li:nth-child(4) {
+background-size: auto 25vh;
+}

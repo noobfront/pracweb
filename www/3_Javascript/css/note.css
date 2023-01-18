@@ -1,0 +1,9 @@
+@charset="utf-8";
+/*utf-8은 인코딩(작성권장, 생략가능)*/
+
+#wrap {
+    color:cornflowerblue;
+}
+article {
+    margin-top: 50px;
+}

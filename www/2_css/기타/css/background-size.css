@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    margin: 20px;
+}
+header {
+    width: auto;
+    height: 100vh;
+    background: url(../2-6_HTML+CSS_기타/images/background.jpg) center;
+    background-size: cover;
+    background-attachment: fixed;
+    /* 화면 전체를 꽉 채우게 */
+    /* attachment:fixed 배경위치스크롤:고정 - background 축약속성으로 표현 가능 */
+}
+h1 {
+    font: bold 64px '나눔고딕';
+    text-align: center;
+    color: #fff;
+    text-shadow: 3px 5px 5px #000;
+    position: relative;
+    /* left: 50%;
+    top: 50%;
+    transform:translateY(-50%,-50%) */
+    height: 90px;
+    top:calc(50% - 90px / 2);
+    /* calc(calculate)는 계산식- 연산자 앞뒤는 반드시 띄어쓰기 */
+}
+
+li {
+    list-style: none;
+    margin: 20px;
+    border: 4px solid red;
+    height: 45vh;
+    /* vh는 viewporh Height,
+    100vh는 body영역의 높이 전체 */
+    /* font-weight: bold;
+    font-size: 32px;
+    line-height: 200px;
+    font-family: 'arial'; */
+    font: bold 32px/45vh 'arial';
+    /* font 한 줄 축약: 두께 글자크기/행간 '글꼴'(비우면 브라우저 기본글꼴) - 순서대로 작성, 글자크기와 글꼴 필수 */
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 10px red;
+    /* 글자 드롭 섀도우: x값 y값 번짐 색상 */
+    /* background-color: #faa;
+    background-image: url(../2-6_HTML+CSS_기타/images/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat; */
+    background: url(../2-6_HTML+CSS_기타/images/background.jpg) center #faa no-repeat;
+    /* 한줄축약:배경이미지 위치 배경색 반복 - 순서에 상관없이 속성별 띄어쓰기(단, url과 ()는 하나의 속성 */
+}
+
+/* background-size(이미지크기 자동설정) 속성은 css3속성이므로 축약속성과는 별도 작성 */
+li:nth-child(1) {
+    background-size: cover;
+    /* 배경이미지-크기 : 영역에 꽉 차게 */
+}
+
+li:nth-child(2) {
+    background-size: contain;
+    /* 배경이미지-크기 : 이미지가 잘리지 않도록 */
+}
+li:nth-child(3) {
+    background-size: 40vw;
+    /* 가로는 40vw(vw는 viewport width-body영역의 가로폭), 세로는 자동(정비례) */
+}
+li:nth-child(4) {
+    background-size: auto 25vh;
+    /* 가로는 자동(정비례), 세로는 25vh */
+}
+
+
+

@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  margin-top: 50px;
+}
+
+
+
+/* transform속성 */
+.trans {
+  width: 1000px;
+  height: 200px;
+}
+
+.trans > li {
+  width: 200px;
+  height: 200px;
+  background-color: #ddd;
+  float: left;
+  margin: 20px;
+  list-style: none;
+  /*
+  transition-delay: 1s;
+ 0.실행지연시간 
+*/
+  /*  transition-property: all;*/
+  /*
+ 1.실행 속성 
+  transition-duration: 0.5s;
+*/
+  /* 2.실행 시간 */
+  /*  transition-timing-function: ease-in-out;*/
+  /* 3.변화 형식(시간제어) : 시작과 끝을 천천히*/
+  transition: all 0.5s ease-in-out;
+  /* 한 줄 속성 입력 : 속성 시간 형식(생략가능) -delay는 주로 별도 표기 */
+  /* transition을 가상클래스에만 적용할 경우 복귀 시 미적용 */
+}
+
+.trans h3 {
+  line-height: 50px;
+  text-align: center;
+}
+
+.note {
+  margin: 10px 10px 10px 30px;
+  line-height: 1.5;
+  font-size: 12px;
+}
+
+.translate:hover {
+  transform: translate(100px, 100px);
+}
+
+.rotate:hover {
+  transform: rotate(-30deg);
+}
+
+.scale:hover {
+  transform: scale(1.2);
+}
+
+/*.와 , 구분해서 사용할 것*/
+
+.skew:hover {
+  transform: skew(15deg, 15deg);
+}
+
+
+/* transform 속성 실습 */
+#banner {
+  /* 가로1110px, 가로 중앙 정렬 */
+  width: 1110px;
+  margin: 0 auto;
+}
+
+#banner > ul {
+  height: 130px;
+}
+
+#banner > ul > li:last-child {
+  margin: 0;
+}
+
+#banner > ul > li {
+  list-style: none;
+  float: left;
+  margin-right: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+#banner > ul > li > a > img {
+  vertical-align: top;
+}
+/* 가상클래스 선택자를 이용하여 각 li에 서로다른 transform 설정*/
+#banner > ul > li:nth-child(1):hover {
+  transform: translate(-20px,20px);
+}
+#banner > ul > li:nth-child(2):hover {
+  transform: rotate(-15deg)
+}
+#banner > ul > li:nth-child(3):hover {
+  transform: scale(1,1.2)
+}
+#banner > ul > li:nth-child(4):hover {
+  transform: skew(-15deg);
+}
+
+
+/*transform 속성을 이용한 블록요소 중앙 정렬*/
+.outbox {
+  width: 800px;
+  height: 500px;
+  background-color: #333;
+  margin: 20px;
+}
+
+.inbox {
+  width: 300px;
+  height: 100px;
+  background-color: #adf;
+  padding: 100px;
+  position: relative;
+/* 위치값을 적용하기 위해 position 설정 */
+  left: 50%;
+  top: 50%;
+/* 부모요소의 중앙으로 기준점 이동 */
+  transform: translate(-50%,-50%);
+/* 자신의 크기의 절반만큼 거꾸로 이동 */
+}
+/*중앙정렬 할 때 마진으로 주게되면 상위 요소까지 영향을 미침. transform으로 정렬할 것*/
+

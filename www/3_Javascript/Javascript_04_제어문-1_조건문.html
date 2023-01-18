@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>제어문-1_조건문</title>
+    <link rel="stylesheet" href="css/note.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>제어문</h1>
+        <article>
+            <h2>1. 조건문 - p.75</h2>
+            <ul>
+                <li>if 문
+                    <ol>
+                        <li>조건을 만족하면 실행</li>
+                    </ol>
+                </li>
+                <li>if ~ else 문
+                    <ol>
+                        <li>조건을 만족하면 명령 1 실행</li>
+                        <li>아니면 명령 2 실행</li>
+                    </ol>
+                </li>
+                <li>if ~ else if ~ else 문
+                    <ol>
+                        <li>조건을 만족하면 명령 1 실행</li>
+                        <li>아니면 조건 2를 만족하면 명령 2 실행</li>
+                        <li>둘 다 아니면 명령 3 실행</li>
+                    </ol>
+                </li>
+            </ul>
+        </article>
+    </div>
+    <script>
+    var age = prompt('당신의 나이는?','20');
+        //prompt 는 입력창
+        //prompt ('질문', '기본대답');
+        
+        if (age >= 20) {
+            document.write('<h2>삐빅 성인</h2>');
+        } else if (age >= 14) {
+            document.write('<h2>삐빅 청소년</h2>');
+        } else {
+            document.write('<h2>삐빅 어린이</h2>');
+        }
+    </script>
+</body>
+
+</html>

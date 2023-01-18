@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/note.css">
+    <title>제어문-3_반복문</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>제어문</h1>
+        <article>
+            <h2>3. 반복문 - p.82</h2>
+            <ul>
+                <li>while문 - 단순 반복</li>
+                <li>for문 / 2중 for 문 - for의 설정에 따라 반복</li>
+                <li>break문 - 정지 </li>
+            </ul>
+        </article>
+    </div>
+    <script>
+        //while문
+        var n = 1;
+        var to = 9;
+        document.write('<h2><br>반복문 예시 - while문 :</h2>' + n + '부터' + to + '까지<br>');
+        while (n <= to) {
+            document.write(n + '<br>');
+            n++;
+        }
+    </script>
+    <script>
+        //for 문
+        document.write('<h2><br>반복문 예시 - for 문 : 구구단 2단</h2>');
+        for (var k = 1; k <= 9; k++) {
+            var result = 2 * k;
+            document.write(2 + '&times;' + k + '=' + result + '<br>');
+        }
+    </script>
+    <script>
+        //2중 for문
+        document.write('<h2><br>반복문 예시 - 2중 for 문 : 구구단</h2>');
+        for (var dan = 2; dan <= 9; dan++) {
+            document.write('<h3>구구단 ' + dan + '단</h3>');
+            for (var k = 1; k <= 9; k++) {
+                var result = dan * k;
+                document.write(2 + '&times;' + k + '=' + result + '<br>');
+                if (k==7) break;
+            }
+            if (dan ==5) break;
+        }
+    </script>
+</body>
+
+</html>

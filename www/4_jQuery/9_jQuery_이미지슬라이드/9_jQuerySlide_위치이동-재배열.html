@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>위치이동-재배열</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous">
+    // integrity와 crossorigin은 해킹방지 설정
+  </script>
+  <link rel="stylesheet" href="css/animate_append.css">
+</head>
+
+<body>
+  <div id="wrap">
+    <section>
+      <h2>이미지 슬라이드</h2>
+      <article>
+        <h3>이미지 슬라이드 - 위치이동(재배열)</h3>
+        <div class="slide">
+          <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+          </ul>
+          <span class="prev"><img src="img/button.png" alt="이전버튼"></span>
+          <span class="next"><img src="img/button.png" alt="다음버튼"></span>
+        </div>
+        <section>
+          <h2>jQuery선택자와 이동 메소드</h2>
+          <article>
+            <h3>탐색 선택자 - p.212</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>선택자 설명</th>
+                  <th scope="col">작성방법 1</th>
+                  <th scope="col">작성방법 2</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">첫 번째 요소</th>
+                  <td>$('선택자:first')</td>
+                  <td>$('선택자').first()</td>
+                </tr>
+                <tr>
+                  <th scope="row">마지막 번째 요소</th>
+                  <td>$('선택자:last')</td>
+                  <td>$('선택자').last()</td>
+                </tr>
+                <tr>
+                  <th scope="row">홀수 번째 요소</th>
+                  <td>$('선택자:odd')</td>
+                  <td>$('선택자').odd()</td>
+                </tr>
+                <tr>
+                  <th scope="row">짝수 번째 요소</th>
+                  <td>$('선택자:even')</td>
+                  <td>$('선택자').even()</td>
+                </tr>
+                <tr>
+                  <th scope="row">n 번째 요소</th>
+                  <td>$('선택자:eq(n)')</td>
+                  <td>$('선택자').eq(n)</td>
+                </tr>
+                <tr>
+                  <th scope="row">n 이전 번째 요소</th>
+                  <td colspan="2">$('선택자:lt(n)')<br>n에 변수명 적용 시 $('선택자:lt(' + 변수명 + ')')</td>
+                </tr>
+                <tr>
+                  <th scope="row">n 이후 번째 요소</th>
+                  <td colspan="2">$('선택자:gt(n)')<br>n에 변수명 적용 시 $('선택자:gt(' + 변수명 + ')')</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+          <article>
+            <h3>객체 이동 메소드 - p.231</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">메소드</th>
+                  <th scope="col">설명</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">$('선택자').prepend(요소)</th>
+                  <td>요소를 선택자 영역 내 맨 앞으로 이동</td>
+                </tr>
+                <tr>
+                  <th scope="row">$('선택자').append(요소)</th>
+                  <td>요소를 선택자 영역 내 맨 뒤로 이동</td>
+                </tr>
+                <tr>
+                  <th scope="row">$('선택자').before(요소)</th>
+                  <td>요소를 선택자의 앞으로 이동</td>
+                </tr>
+                <tr>
+                  <th scope="row">$('선택자').after(요소)</th>
+                  <td>요소를 선택자의 뒤로 이동</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </section>
+      </article>
+    </section>
+  </div>
+  <script src="js/animate_append.js"></script>
+</body>
+
+</html>

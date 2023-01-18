@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript_01_선언문(기본형)</title>
+<!--라이브러리 파일 사용 시 입력or연결 위치(권장)-->
+    <link rel="stylesheet" href="css/note.css">
+<!--  type속성을 입력 권장, 삭제 가능(웹표준)  -->
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>자바스크립트 입력 형식 - p.29~p.30</h1>
+        <article>
+            <h2>태그 입력 형식</h2>
+            <ul>
+                <li>&lt;script&gt;&lt;/script&gt;형식으로 입력</li>
+                <li>type="text/javascript" 속성을 설정 - 생략 가능</li>
+                <li>head 영역 혹은 body 영역 안에 입력 - body 영역 하단 권장</li>
+            </ul>
+        </article>
+        <article>
+            <h2>실행문 입력 형식</h2>
+            <p>document.write('문장');<br>객체.메소드('실행내용');<br>누가.어떻게('무엇을');</p>
+        </article>
+        <article>
+            <h2>주석 처리방법</h2>
+            <p>//한 줄 설명글(한 줄 = 엔터X, 동일한 행 번호)</p>
+            <p>/*설명글이 1행을 초과할 때는 css와 같은 방법으로 표기*/</p>
+        </article>
+    </div>
+<!--스크립트 실행파일 입력or연결 위치(권장)-->
+    <script>document.write('<h1>자바스크립트를 보여주세요.</h1>');//주석내용입력
+    /*주석내용이 2행 이상일 때에는 css와 같은 방법 사용*/</script>
+</body>
+
+</html>

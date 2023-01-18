@@ -1,0 +1,321 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #0cf;
+  text-align: center;
+  font-size: 12px;
+}
+
+li {
+  float: left;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#wrap {
+  width: auto;
+  background-image: url(../images/00_line.png);
+  background-repeat: repeat-x;
+}
+
+
+
+
+
+/****** 헤더 영역 ******/
+#header {
+  width: 1000px;
+  height: 120px;
+  margin: 0 auto;
+}
+
+#header > div {
+  float: left;
+}
+
+#header_left {
+  width: 400px;
+  height: 120px;
+}
+
+#left_top {
+  width: 400px;
+  height: 60px;
+}
+
+#left_lnb {
+  width: 400px;
+  height: 60px;
+}
+
+#left_lnb > ul {
+  width: 400px;
+  height: 60px;
+}
+
+#left_lnb > ul > li {
+  width: 80px;
+  height: 60px;
+  background-image: url(../images/01_menu_left.jpg);
+}
+
+.left1 {
+  background-position: 0 0;
+}
+.left1:hover {
+  background-position: 0 -60px;
+}
+.left2 {
+  background-position: -80px 0;
+}
+.left2:hover {
+  background-position: -80px -60px;
+}
+.left3 {
+  background-position: -160px 0;
+}
+.left3:hover {
+  background-position: -160px -60px;
+}
+.left4 {
+  background-position: -240px 0;
+}
+.left4:hover {
+  background-position: -240px -60px;
+}
+.left5 {
+  background-position: -320px 0;
+}
+.left5:hover {
+  background-position: -320px -60px;
+}
+
+#left_lnb > ul > li > a {
+  display: block;
+  height: 100%;
+  text-indent: -9999px;
+}
+
+#logo {
+  width: 204px;
+  height: 120px;
+  background-image: url(../images/02_top_logo.jpg);
+  background-position: 0 0;
+}
+
+#logo:hover {
+  background-position: 0 -120px;
+}
+
+#logo > h1 {
+  height: 100%;
+}
+
+#logo > h1 > a {
+  display: block;
+
+  height: 100%;
+  text-indent: -9999px;
+}
+
+#header_right {
+  width: 396px;
+  height: 120px;
+}
+
+#right_top {
+  width: 396px;
+  height: 60px;
+}
+
+#gnb {
+  height: 15px;
+  float: right;
+  margin-top: 10px;
+}
+
+#gnb > ul {
+  width: 264px;
+  height: 15px;
+  border-left: 2px solid #0cf;
+}
+
+#gnb > ul > li {
+  width: 64px;
+  height: 15px;
+  border-right: 2px solid #0cf;
+}
+
+#gnb > ul > li > a {
+  display: block;
+  height: 100%;
+  line-height: 20px;
+}
+
+#right_lnb {
+  width: 396px;
+  height: 60px;
+}
+
+#right_lnb > ul {
+  width: 396px;
+  height: 60px;
+}
+
+#right_lnb > ul > li {
+  width: 66px;
+  height: 60px;
+  background-image: url(../images/03_menu_right.jpg);
+}
+
+.right1 {
+  background-position: 0 0;
+}
+.right1:hover {
+  background-position: 0 -60px;
+}
+.right2 {
+  background-position: -66px 0;
+}
+.right2:hover {
+  background-position: -66px -60px;
+}
+.right3 {
+  background-position: -132px 0;
+}
+.right3:hover {
+  background-position: -132px -60px;
+}
+.right4 {
+  background-position: -198px 0;
+}
+.right4:hover {
+  background-position: -198px -60px;
+}
+.right5 {
+  background-position: -264px 0;
+}
+.right5:hover {
+  background-position: -264px -60px;
+}
+.right6 {
+  background-position: -330px 0;
+}
+.right6:hover {
+  background-position: -330px -60px;
+}
+
+#right_lnb > ul > li > a {
+  display: block;
+  height: 100%;
+  text-indent: -9999px;
+}
+
+
+
+
+
+/****** 콘텐츠 영역 ******/
+#contentwrap {
+  width: 1000px;
+  height: 667px;
+  margin: 0 auto;
+}
+
+
+
+
+
+/****** 푸터 영역 ******/
+#footer {
+  width: auto;
+  height: 100px;
+  background-image: url(../images/99_bottom_line.png);
+  background-repeat: repeat-x;
+}
+
+#fnb {
+  width: 1000px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+#fnb > ul {
+  width: 1000px;
+  height: 50px;
+}
+
+#fnb > ul > li {
+  width: 200px;
+  height: 50px;
+  background-image: url(../images/99_bottom_logo.jpg);
+}
+
+.fnb1 {
+  background-position: 0 0;
+}
+
+.fnb1:hover {
+  background-position: 0 -50px;
+}
+
+.fnb2 {
+  background-position: -200px 0;
+}
+
+.fnb2:hover {
+  background-position: -200px -50px;
+}
+
+.fnb3 {
+  background-position: -400px 0;
+}
+
+.fnb3:hover {
+  background-position: -400px -50px;
+}
+
+.fnb4 {
+  background-position: -600px 0;
+}
+
+.fnb4:hover {
+  background-position: -600px -50px;
+}
+
+.fnb5 {
+  background-position: -800px 0;
+}
+
+.fnb5:hover {
+  background-position: -800px -50px;
+}
+
+#fnb > ul > li h2 {
+  height: 100%;
+}
+
+#fnb > ul > li a {
+  display: block;
+  height: 100%;
+  text-indent: -9999px;
+}
+
+#address {
+  width: 1000px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+address {
+  font-style: normal;
+}
+
+small {
+  font-size: 100%;
+}

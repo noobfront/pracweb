@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>제어문-2_선택문</title>
+    <link rel="stylesheet" href="css/note.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>제어문</h1>
+        <article>
+            <h2>2. 선택문(switch ~ case 문) - p.79</h2>
+            <ul>
+                <li>switch의 값과 case의 값을 하나씩 비교해서 일치하는 case를 반환</li>
+                <li>switch ~ case 문은 특정 조건을 만족했을 때 스스로 빠져나가지 못해</li>
+                <li>일치하는 값이 없을 때에는 default를 사용</li>
+            </ul>
+        </article>
+    </div>
+
+    <script>
+        // 전역변수(모든 명령에 대한 변수) 설정
+        var area = prompt('지역을 입력하세요', '서울');
+        switch (area) {
+            case '서울': //지역변수(해당 명령에 대한 변수) 설정
+                num = '02'; //var 사용 시 변수값이 초기화됨
+                break; //만족하면 종료
+            case '경기':
+                num = '031';
+                break;
+            case '인천':
+                num = '032';
+                break;
+            default:
+                alert('전화국에 문의하세요');
+        };
+        document.write('<h2>문의하신 ' + area + ' 지역의 지역번호는 ' + num + ' 입니다. < /h2>')
+    </script>
+</body></html>

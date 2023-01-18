@@ -1,0 +1,62 @@
+@charset"utf-8";
+
+/*css의 주석*/
+
+/*브라우저 초기화 및 전체 설정*/
+
+/* '*'은 모든 요소 */
+* {
+  margin: 0;
+  /*외부여백*/
+  padding: 0;
+  /*내부여백*/
+  font-size: 32px;
+/* 글자크기 : 기본설정은 a태그 기준 16px - 다른 요소들은 요소별 차등*/
+  color: #fff;
+}
+li{
+  list-style: none;float: left; 
+    /* list-style 점 숫자 등 목록의 장식 제거 float속성 설정 시 블록요소의 width:100%속성이 초기화*/
+  margin: 10px;
+/* 외부여백 - 값을 1개 입력하면 상하좌우 동일 */
+}
+
+#header{
+  width: 1000px; /*height: 200px;
+/*width 가로폭 height 세로높이;*/
+/* 자녀요소에 float속성이 있을 때에는 1. 높이를 설정하거나 2. 다음 요소에 clear속성 설정 */
+  background-color: #f00;
+}
+#left_lnb{
+  width: 400px;height: 200px;background-color: #f0f8ff;float: left;
+/*왼쪽으로 이어붙이기 - 가로분할요소에 모두 설정*/
+}
+#logo{
+  width: 200px;height: 200px;background-color: #9a6f37;float: left;
+  /*왼쪽으로 이어붙이기 - 가로분할요소에 모두 설정*/
+}
+#right_lnb{
+  width: 400px;height: 200px;background-color: #d43838;float: left;
+  /*왼쪽으로 이어붙이기 - 가로분할요소에 모두 설정*/
+}
+#contentwrap{
+  width: 1000px;height: 400px; background-color: #5aba9a;clear: both;
+/* 다음요소에까지 영향을 미치는 float:left 종료 */
+}
+#contents{
+  width: 1000px;height: 300px;background-color: #4242dd;
+}
+#banner{
+  width: 1000px;height: 100px;background-color: #ba6666;
+}
+#footer{
+  width: 1000px;height: 150px;background-color: #d1d180;
+}
+#bottom_logo{
+  width: 300px;height: 150px;background-color: #e37249;float: left;
+/*왼쪽으로 이어붙이기 - 가로분할요소에 모두 적용*/
+}
+#address{
+  width: 700px;height: 150px;background-color: #40f040;float: left;
+  /*왼쪽으로 이어붙이기 - 가로분할요소에 모두 적용*/
+}

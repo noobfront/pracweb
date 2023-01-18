@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>html+css입력방법</title>
+<style type="text/css">
+    .internal {
+        color: green
+    }
+    </style>
+    <link href="Css/link.css" rel="stylesheet" type="text/css">
+    <!--rel은 관계, type은 형식-->
+</head>
+<body>
+    <h1>html+css 입력방법</h1>
+    <br>
+    <h2>css 형식</h2>
+    <p>선택자{속성:속성값;속성:속성값}</p>
+    <br>
+    <h2>선택자 유형</h2>
+    <ol>
+        <li>tpye(태그) 선택자 - '태그명'을 그대로 입력</li>
+        <li>class 선택자 - '.'+'클래스명'을 입력</li>
+        <li>id 선택자 - '#'+'아이디명'을 입력</li>
+        <li>복합 선택자</li>
+    </ol>
+    <p>선택자는 구체적일수록 우선순위가 높다.</p>
+    <br>
+    <h2>css를 html에 적용시키는 방법</h2>
+    <h3 style="color: red">1. Inline Style Sheet</h3>
+    <p>HTML 문서의 태그 안에 style속성을 직접 입력<br>- css입력내용이 매우 적을 때 사용<br>(우선순위 높음)</p>
+    <h3 class="internal">2. Internal Style Sheet</h3>
+    <p>HTML문서의 head영역 안에 style태그를 삽입<br>- style태그에 type속성 입력<br> - 간단한 문서에 사용</p>
+    <h3 class="link">3. Linking Style Sheet</h3>
+    <p>별도의 css파일을 작성하여 html문서와 연결</p> <br> - head영역 안에 link
+</body>
+</html>

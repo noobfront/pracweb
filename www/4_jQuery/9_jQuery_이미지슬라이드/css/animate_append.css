@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+  width: 100%;
+}
+
+#wrap {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+h2,
+h3 {
+  margin: 20px;
+}
+
+.slide {
+  width: 100%;
+  position: relative;
+  background-color: #333;
+  overflow: hidden;
+}
+
+.slide>ul {
+  width: calc(250px * 3 + 50px * 2);
+  height: calc(250px + 50px * 2);
+  margin: 50px auto;
+  position: relative;
+}
+
+.slide>ul>li {
+  width: 250px;
+  height: 250px;
+  background-color: #ddd;
+  position: absolute;
+  text-align: center;
+  font: bold 150px'';
+  line-height: 250px;
+}
+
+.slide>ul>li:nth-child(1) {
+  left: 0;
+  top: 0;
+}
+
+.slide>ul>li:nth-child(2) {
+  left: 300px;
+  top: 100px;
+  background-color: #a00;
+}
+
+.slide>ul>li:nth-child(3) {
+  left: 600px;
+  top: 0;
+}
+
+.prev,
+.next {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: calc(50% - 15px);
+  cursor: pointer;
+}
+
+.prev {
+  left: 30px;
+  transform: rotate(90deg);
+}
+
+.next {
+  right: 30px;
+  transform: rotate(-90deg);
+}
+
+/* 선택자와 메소드 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th,td {
+  border: 1px solid #666;
+  padding: 5px 10px;
+}
+
+th {
+  background-color: #eee;
+}

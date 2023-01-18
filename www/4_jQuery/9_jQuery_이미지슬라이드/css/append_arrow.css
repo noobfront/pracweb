@@ -1,0 +1,26 @@
+.slide {
+  position: relative;
+  /* .prev 와 .next의 기준 */
+  }
+  
+  .prev,.next {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: calc(50% - 15px);
+  cursor: pointer;
+  }
+  
+  .prev {
+  left: 30px;
+  transform: rotate(90deg);
+  }
+  
+  .next {
+  right: 30px;
+  transform: rotate(-90deg);
+  }
+  
+  span img {
+  width: 100%;
+  }

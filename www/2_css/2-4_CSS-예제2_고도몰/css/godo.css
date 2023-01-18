@@ -1,0 +1,218 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  float: left;
+  list-style: none;
+}
+
+.hidden {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  /* 시각적으로 보이지 않게*/
+  /* 영역의 크기를 0으로 처리 */
+  /* 컨텐츠의 크기를 0으로 설정 */
+  font-size: 0;
+  line-height: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#header {
+  width: 100%;
+  height: 132px;
+}
+
+#top {
+  width: 1110px;
+  height: 52px;
+  margin-bottom: 38px;
+  margin: 40px auto 38px auto;
+}
+
+#top > div {
+  float: left;
+}
+
+#logo {
+  width: 253px;
+  height: 52px;
+}
+
+#header_right {
+  width: 857px;
+  height: 52px;
+}
+
+#gnb {
+  height: 15px;
+  float: right;
+/* 오른쪽으로 이어붙이기 */
+/* 높이 설정 */
+}
+
+#gnb > ul {
+  height: 15px;
+  border-left: 1px solid #ddd;
+/* 높이 설정 */
+}
+
+#gnb > ul > li {
+  height: 15px;
+  border-right: 1px solid #ddd;
+/* 높이 설정 */
+}
+
+#gnb > ul > li > a {
+/* 높이 설정, 좌우 간격 설정 */
+  font-size: 12px;
+  padding: 0 10px;
+  line-height: 15px;
+  display: block;
+}
+#lnb {
+  width: 1110px;
+  height: 40px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #000;
+}
+
+#lnb > ul {
+  width: 100%;
+  height: 40px;
+  margin: 0 auto;
+}
+
+#lnb > ul > li {
+  height: 40px;
+}
+
+#lnb > ul > li > a {
+  display: block;
+  /* 인라인 요소에 크기 지정하기위해 블록요소로 변환 */
+  padding: 0 20px;
+  /* margin도 가능은 하지만 박스가 작아 사용이 불편 */
+  line-height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+#contentwrap {
+  width: 100%;
+  height: 922px;
+  border-bottom: 1px solid #000;
+}
+
+#main_banner {
+  width: 100%;
+  height: 393px;
+  border-bottom: 4px solid #000;
+  background-image: url(../images/image_slide_1.jpg);
+  background-position: center;
+}
+
+#banner {
+  width: 1110px;
+  height: 130px;
+  margin: 20px auto;
+}
+
+.mr10 {
+  margin-right: 10px;
+}
+
+#best {
+  width: 1110px;
+  height: 334px;
+  margin: 0 auto;
+}
+#best > h3 {
+  font-weight: normal;
+/* 글자두께 : 보통 - strong태그는 그대로 */
+  height: 30px;
+}
+.mr16 {
+  margin-right: 16px;
+}
+
+.mr17 {
+  margin-right: 17px;
+}
+
+
+
+
+
+
+
+#footer {
+  width: 1110px;
+  height: 120px;
+}
+
+#footer > div {
+  float: left;
+}
+
+#bottom_logo {
+  width: 253px;
+  height: 90px;
+  margin-top: 30px;
+}
+
+#footer_right {
+  width: 857px;
+  height: 120px;
+}
+
+#fnb {
+  width: 857px;
+  height: 30px;
+}
+#fnb > ul {
+  height: 30px;
+}
+#fub > ul > li {
+  height: 30px;
+}
+#fnb > ul > li > a {
+  font-weight: bold;
+  font-size: 14px;
+  display: block;
+  line-height: 30px;
+  padding-right: 20px;
+}
+# address a {
+  font-weight: bold;
+}
+#address {
+  width: 857px;
+  height: 90px;
+  font-size: 12px;
+  line-height: 1.5;
+/* 행간 : 단위가 없을 때에는 font-size의 배수 */
+  height: 60px;
+}
+address {
+  font-style: normal;
+/* address의 기본설정은 italic */
+}
+small {
+  font-size: 100%;
+/* small태그의 기본설정은 약 85% */
+}

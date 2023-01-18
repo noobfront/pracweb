@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+  /* img요소의 기본 여백 제거 */
+}
+
+h2,
+h3 {
+  margin: 20px;
+}
+
+.slide {
+  width: 100%;
+}
+
+.slide>ul {
+  width: 500%;
+  /* 부모요소의 5배 */
+  overflow: hidden;
+  position: relative;
+  left: 0;
+}
+
+.slide>ul>li {
+  /* 부모요소의 1/5 */
+  width: 20%;
+  float: left;
+}
+
+.slide>ul>li>a {
+  /* PC웹에서 img의 크기를 설정하고 li의 중앙으로 정렬, 반응형 웹에서는 주로 생략 */
+}
+
+.slide>ul>li>a>img {
+  /* 부모요소에 맞춤 */
+  width: 100%;
+}

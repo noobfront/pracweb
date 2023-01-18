@@ -1,0 +1,9 @@
+header {
+  /* 스크립트로 위치를 제어하기 위해 position 설정, fixed 취소 */
+  background-attachment: scroll;
+  /* fixed 취소 */
+  position: relative;
+  top: 0;
+  z-index: -1;
+  /* 하이퍼링크 or 버튼이 있을 때 z-index 0 이상으로 하고 다른 요소의 z값을 더 높게 */
+}

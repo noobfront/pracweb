@@ -1,0 +1,18 @@
+.popup {
+    /* 크기를 0으로, 위치는 오른쪽 위 */
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    left: auto;
+    /* left:0 속성을 유연하게 */
+    right: 0;
+    transition: all 0.5s ease-in-out;
+    /* 변화과정: 속성 실행시간 형식(시작과 끝을 부드럽게) */
+}
+
+
+.view {
+    /* 정상 크기와 위치 */
+    width: 100%;
+    height: calc(100vh - 120px);
+}

@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  margin-top: 30px;
+}
+
+/*가상 클래스 선택자*/
+.child > ul > li:first-child {
+  color: red;
+}
+
+.child > ul > li:nth-child(2) {
+  color: green;
+}
+
+.child > ul > li:last-child {
+  color: blue;
+}
+
+
+
+/*가상요소 선택자*/
+
+/*before&after 공통*/
+nav {
+  width: 1024px;
+  height: 100px;
+  background-color: #ddd;
+  margin-top: 20px;
+}
+nav > ul {
+  float: right;
+}
+
+nav > ul > li {
+  list-style: none;
+  float: left;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 32px;
+  color: #000;
+}
+
+nav > ul > li > a {
+  padding: 0 20px;
+}
+
+nav > ul > li:nth-child(1) > a {
+  padding-left: 0;
+}
+
+nav > ul > li:nth-child(5) > a {
+  padding-right: 0;
+}
+
+/*가상클래스를 이용한 a태그 간격 설정*/
+
+/*before*/
+.before > ul > li {
+  position: relative;
+  /* 가상요소(자녀와 비슷)인 before의 위치 기준. */
+}
+
+.before > ul > li::before {
+  content: "";
+  width: 2px;
+  height: 20px;
+  background-color: red;
+  position: absolute;
+  /* 부모요소 중 position 속성이 있는 요소를 기준으로 삼음. */
+  left: 0px;
+  top: 12px;
+  /* 텍스트로 표현할 때 ""안에 입력, 모양으로 입력할 때 비워놓기*/
+}
+
+.before > ul > li:nth-child(1)::before {
+  content: none;
+}
+
+
+/*after*/
+.after > ul > li {
+  position: relative;
+  /* 가상요소의 위치 기준 */
+}
+
+.after > ul > li::after {
+  content: "";
+  width: 2px;
+  height: 20px;
+  background-color: blue;
+  position: absolute;
+  right: 0;
+  top: 12px;
+  /* 2*20px, 파란색 막대, 오른쪽 끝 위치 */
+}
+
+.after > ul > li:nth-child(5)::after {
+  content: none;
+  /* 마지막 li의 가상요소 제거 */
+}

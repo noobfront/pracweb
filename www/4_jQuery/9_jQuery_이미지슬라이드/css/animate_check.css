@@ -1,0 +1,32 @@
+/* .btn의 기준 설정 */
+
+aside {
+  position: relative;
+}
+
+.btn {
+  /* 버튼 5개 크기 + 간격(20px) */
+  width: calc(20px * 5 + 20px * 4);
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% - (20px * 5 + 20px * 4) / 2)
+}
+
+.btn>li {
+  /* 버튼 1개(20 * 20) 크기 */
+  width: 20px;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 50%;
+  float: left;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.btn>li:last-child {
+  margin: 0;
+}
+
+li.check {
+  background-color: pink;
+}

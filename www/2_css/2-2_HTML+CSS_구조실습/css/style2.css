@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+/*브라우저 초기화 및 전체설정*/
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 32px;
+  color: #fff;
+}
+li{
+  float: left; list-style: none; margin: 0 10px;
+/*  값을 두개 입력하면 1.상하 2.좌우*/
+/* 값을 1개 입력하면 4방향공통적용, 2개 이상 입력하면 위쪽부터 시계방향으로 적용 - 1.위 2.오른쪽 3.아래 4.왼쪽 (미입력 값은 대칭과 동일) */
+}
+
+#header {
+  width: 1000px;
+  height: 200px;
+  background-color: #65b9b9;
+}
+#top{
+  width: 1000px;height: 150px;background-color: #f89292;
+}
+
+#logo{
+  width: 300px;height: 150px;background-color: #cc8629;float: left;
+}
+
+#right{
+  width: 700px;height: 150px;background-color: blanchedalmond;float: left;
+}
+
+#gnb{
+  width: 600px;height: 60px;background-color: yellow;float: right;
+}
+
+#lnb{
+  width: 1000px;height: 50px;background-color: aliceblue
+}
+
+#contentwrap {
+  width: 1000px;
+  height: 400px;
+  background-color: #edc897;
+}
+
+#main_banner{
+  width: 1000px;height: 200px;background-color: #7575f7;
+}
+
+#banner{
+  width: 1000px;height: 100px;background-color: #6bc66b;
+}
+
+#best{
+  width: 1000px;height: 100px;background-color: #f58181;
+}
+
+#footer {
+  width: 1000px;
+  height: 150px;
+  background-color: #5d91bf;
+}
+#bottom_logo{
+  width: 300px;height: 150px;background-color: #63b1f5; float: left;
+}
+#bottom{
+  width: 700px;height: 150px;background-color: #48b792; float: left;
+}
+
+#fnb{
+  width: 700px;height: 50px;background-color: blueviolet;
+}
+
+#address{
+  width: 700px;height: 100px;background-color: pink;
+}

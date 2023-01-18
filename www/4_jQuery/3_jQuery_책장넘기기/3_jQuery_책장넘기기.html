@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>책장넘기기</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="css/rotateY.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <main>
+            <!-- main태그는 section을 묶는 태그 -->
+            <!-- Multi Page Application에는 사용하지 않음 / Single page Application에 한 번 만 사용 -->
+            <section id="sec1" class="">
+                <article>표지</article>
+                <article class="back">표지 안쪽</article>
+            </section>
+            <section id="sec2" class="">
+                <article>1</article>
+                <article class="back">2</article>
+                <span class="btn">
+                    &gt;
+                </span>
+            </section>
+            <section id="sec3" class="">
+                <article>3</article>
+                <article class="back">4</article>
+                <span class="btn">
+                    &gt;
+                </span>
+            </section>
+            <section id="sec4" class="">
+                <article>5</article>
+                <article class="back">뒷 표지</article>
+            </section>
+        </main>
+    </div>
+    <script src="js/toggleClass.js"></script>
+</body>
+
+</html>

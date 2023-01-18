@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>파비콘</title>
+    <style type="text/css">
+        article {
+            margin-top: 50px;
+        }
+        table {
+            background-color: #aaa;
+        }
+    </style>
+</head>
+
+<body>
+<div id="wrap">
+    <h1>파비콘 만들기</h1>
+    <article>
+        <h2>이미지 파일(png/jpg/gif)준비 - png 권장</h2> 
+        <table border="1">
+            <thead>
+                <tr>
+                    <th scope="col">jpg</th>
+                    <th scope="col">png</th>
+                    <th scope="col">ico</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="../기타/2-6_HTML+CSS_기타/images/favicon.jpg" alt=""></td>
+                    <td><img src="../기타/2-6_HTML+CSS_기타/images/favicon.png" alt=""></td>
+                    <td><img src="../기타/2-6_HTML+CSS_기타/images/favicon.ico" alt=""></td>
+                </tr>
+                <tr>
+                    <td>웹 이미지 기본 포맷<br> - 투명배경 사용 불가</td>
+                    <td>웹 이미지 기본 포맷<br> - 투명배경 사용 가능</td>
+                    <td>파비콘 전용 포맷<br> - jpg/png/gif 등의 이미지 파일을 이용해서 변환</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </article>
+    <article>
+        <h2>ico 파일 제작</h2>
+        <ol>
+            <li><a href="http://www.convertico.com/favicon" target="_blank">http://www.convertico.com/favicon</a>에 방문하여 png(jpg)파일을 ico파일로 변환하여 저장</li>
+            <li>head 영역 안에<br>&lt;link rel='shortcuticon' href="ico파일명" type"image/x-icon"&gt;<br>태그를 삽입</li>
+        </ol>
+        <p>고해상의 ico파일을 원할 때에는 <br>사이트 내의 <a href="http://convertico.com">CONVERTICO.COM</a> 탭을 클릭하여 ico파일을 제작</p>
+    </article>
+</div>
+</body>
+
+</html>

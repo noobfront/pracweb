@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  /*외부여백*/
+  padding: 0;
+  /*내부여백*/
+}
+
+section {
+  /*** 화면 전체 크기 설정 ***/
+  /*width: 100%;는 블록요소의 기본설정이므로 생략 가능*/
+  height: 100vh;
+  /*vh는 Viewport Height(브라우저 body 높이), 100vh는 body 영역의 높이 전체*/
+  /*background-image: url(../img/back.jpg);*/
+  /*background-position: center;*/
+  background: url(../img/back.jpg) center;
+  /*배경한줄축약속성: 배경이미지 위치*/
+  background-size: cover;
+  /*배경이미지크기: 영역에 꽉 차게*/
+}
+
+h2 {
+  padding: 20px;
+}
+
+/*두 개 이상의 선택자를 작성할 때에는 쉼표(,)로 구분*/
+.on,
+.off,
+.toggle {
+  background-color: #ddd;
+  float: left;
+  /*Z값을 띄워서 왼쪽으로 이어붙이기 - 설정시 width:100% 설정 삭제*/
+  padding: 5px 20px;
+  /*내부여백 - 값을 1개 입력시 4방향 공통적용, 2개 이상 입력시 위쪽부터 시계방향(미입력값은 대칭과 동일)*/
+  margin-left: 20px;
+  /*외부여백*/
+  list-style: none;
+  /*점,숫자 등 목록의 장식 제거*/
+  border: 2px solid #aaa;
+  /*외곽선: 두께 종류 색상*/
+  border-radius: 5px;
+  /*모퉁이 둥굴리기: 반지름*/
+  cursor: pointer;
+  /*버튼화*/
+}
+
+.toggle {
+  background-color: #333;
+  color: #aaa;
+  font-weight: bold;
+}
+
+.popup {
+  /*** 위치/크기/배경색(반투명) 설정 ***/
+  position: absolute;
+  width: 100%;
+  /*position: absolute설정시 width:100% 삭제*/
+  top: 120px;
+  left: 0;
+  height: calc(100vh - 120px);
+  /*calc(calculate)는 계산식(전체높이 - top제외) - 연산자의 앞/뒤는 반드시 띄어쓰기*/
+  background-color: rgba(0, 0, 0, 0.6);
+  /*rgba(Red,Green,Blue,Opacity)*/
+}
+
+.photo {
+  /*** 크기는 가로50%(최소400px),세로 자동 ***/
+  width: 50%;
+  min-width: 400px;
+  /*** 위치를 부모요소인 .popup의 중앙으로 ***/
+  position: absolute;
+  /*기준은 부모요소인 .popup*/
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.photo img {
+  /*** 부모요소인 .photo에 맞춤 ***/
+  width: 100%;
+  vertical-align: top;
+  /*img태그의 기본 여백 제거*/
+}
+
+.close {
+  /*** 30*30px/배경색/위치:오른쪽위 ***/
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  /*버튼화*/
+}
+
+.close span {
+  /*** 40*2px 흰색 가로 막대 ***/
+  width: 40px;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  right: -5px;
+  top: 14px;
+}
+
+.close span:nth-child(1) {
+  /*** 시계방향으로 45도 회전 ***/
+  transform: rotate(45deg);
+}
+
+.close span:nth-child(2) {
+  /*** 반시계방향으로 45도 회전 ***/
+  transform: rotate(-45deg);
+}

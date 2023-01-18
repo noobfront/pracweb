@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>1_html_06-3_폼_input 사용</title>
+</head>
+
+<body>
+    <h2>form의 input요소</h2>
+    <form action="join.php" method="post">
+        <!--form은 input요소 등을 입력하기 위한 영역을 지정-->
+        <!--action은 보안프로그램 등, 개발자가 지정-->
+        <!--method는 웹서버와의 데이터 전송 방법, 개발자가 지정-->
+        <fieldset>
+            <legend>회원가입</legend>
+            <!--legend는 fieldset의 경계선의 제목 입력-->
+            <p>아이디 : <input type="text" size="12" maxlength="8" placeholder="(영문8자)"></p>
+            <!--size 12는 약12바이트-->
+            <p>비밀번호 : <input type="password" size="25" maxlength="18" placeholder="(영문+숫자 18자)"></p>
+            <p>메일 수신 여부 : <input type="radio" name="email" value="y">예 <input type="radio" name="email" value="n">아니오</p>
+            <p>관심분야 : <input type="checkbox" name="html">HTML <input type="checkbox" name="css">CSS <input type="checkbox" name="jquery"> jQuery</p>
+            <p>파일 업로드 : <input type="file"></p>
+            <p><input type="submit" value="전송"><input type="reset" value="취소"><input type="button" value="확인"><input type="image" src=search.gif alt="검색버튼"></p>
+        </fieldset>
+        <!--fieldset은 form 영역의 경계선을 시각화-->
+    </form>
+</body>
+
+</html>

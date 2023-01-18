@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h2,
+h3 {
+  margin: 20px;
+}
+
+.slide {
+  width: 100%;
+}
+
+.slide>ul {
+  width: 500%;
+  overflow: hidden;
+  position: relative;
+  left: 0;
+}
+
+.slide>ul>li {
+  width: 20%;
+  float: left;
+}
+
+.slide>ul>li>a>img {
+  width: 100%;
+}
+
+.slide {
+  position: relative;
+}
+
+.prev,
+.next {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: calc(50% - 15px);
+  cursor: pointer;
+}
+
+.prev {
+  left: 30px;
+  transform: rotate(90deg);
+}
+
+.next {
+  right: 30px;
+  transform: rotate(-90deg);
+}
+
+span img {
+  width: 100%;
+}
+
+aside {
+  position: relative;
+}
+
+.btn {
+  width: calc(20px * 5 + 20px * 4);
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% - (20px * 5 + 20px * 4) / 2)
+}
+
+.btn>li {
+  width: 20px;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 50%;
+  float: left;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.btn>li:last-child {
+  margin: 0;
+}
+
+li.check {
+  background-color: pink;
+}

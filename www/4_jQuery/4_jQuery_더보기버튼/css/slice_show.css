@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* style */
+section {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+h2 {
+    margin: 20px;
+}
+
+.contents {
+    overflow: hidden;
+    /* 
+    1. 영역을 벗어난 요소는 보이지 않게
+    2. 영역의 크기(높이)를 자동 계산
+     */
+    margin: 20px 0;
+}
+
+.contents>li {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #666;
+    box-sizing: border-box;
+    float: left;
+    border-radius: 12px;
+    background-color: #ddd;
+    margin: 0 6px 6px 0;
+}
+
+.contents>li:nth-child(5n) {
+    margin-right: 0;
+}
+
+.contents>li:nth-child(5n+3) {
+    background-color: pink;
+    /* (5n+3)은 세 번째와 그 후 5의 배수 번째 */
+}
+
+.contents>li>a {
+    font: bold 32px/200px '';
+    /* height속성이 없을 경우 line-height가 height 역할도 수행 */
+    display: block;
+    color: #000;
+}
+
+.more {
+    width: 100%;
+    font: bold 16px/50px '';
+    margin-bottom: 20px;
+    border: 2px solid #999;
+    border-radius: 12px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}

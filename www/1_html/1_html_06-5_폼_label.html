@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>폼_label</title>
+</head>
+
+<body>
+    <h2>label요소</h2>
+    <p>label요소는 input요소의 이름표</p>
+    <br>
+    <h2>label요소 입력 방법</h2>
+    <ol>
+        <li>label태그로 input태그를 감싼다.</li>
+        <li>input태그의 id속성과 label태그의 for속성을 연결 - 권장</li>
+    </ol>
+    <form>
+        <fieldset>
+            <legend>회원가입</legend>
+            <p>1. input태그를 감싸기</p>
+            <p><label>이메일 : <input type="text" size="10">@<select>
+                        <option>daum.net</option>
+                        <option>naver.com</option>
+                    </select></label></p>
+            <p>2. id와 for를 연결</p>
+            <table border="1">
+                <tr>
+                    <th scope="row"><label for="myname"></label>이름</th>
+                    <td><input id="myname"type="text" size="20"></td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="aidi"></label>아이디</th>
+                    <td><input id="aidi" type="text" size="20"></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+
+</html>

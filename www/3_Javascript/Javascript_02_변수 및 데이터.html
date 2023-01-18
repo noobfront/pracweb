@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>변수 및 데이터</title>
+    <link rel="stylesheet" href="css/note.css">
+</head>
+<body>
+    <div id="wrap">
+        <h1>변수 및 데이터 - p.46</h1>
+        <article>
+            <h2>변수(variable) 선언</h2>
+            <p>var 변수명 = 값;</p>
+        </article>
+        <article>
+            <h2>변수명 작성 시 주의사항</h2>
+            <ul>
+                <li>변수명은 띄어쓰기 할 수 없음</li>
+                <li>변수명에는 영문, 언더바(_), $, 숫자를 쓸 수 있음<br>- 단, 맨 앞에는 숫자 쓸 수 없음</li>
+                <li>예약어는 변수명으로 사용할 수 없음<br>- 예약어를 입력하면 글자색 변경됨 (예약어는 p.41) </li>
+            </ul>
+        </article>
+        <article>
+            <h2>변수에 저장 가능한 데이터의 종류</h2>
+            <ul>
+                <li>문자형 데이터</li>
+                <li>숫자형 데이터</li>
+                <li>논리형(true/false) 데이터</li>
+                <li>null형(비어있음) 데이터</li>
+            </ul>
+        </article>
+    </div>
+    <script>
+    //개별 변수 설정
+        var num1 = 100;
+        var num2 = 8;
+        
+        // 추가 변수 설정
+        var sum = num1 + num2;
+        
+        //화면 출력
+        document.write(num1);
+        document.write('num1');
+        //'' = 텍스트 취급
+        
+        //변수와 문자 함께 출력
+        document.write('<h1>변수 num1은 '+ num1 +'입니다.</h1>');
+        document.write('<h1>변수 num2는 '+ num2 +'입니다.</h1>');
+        document.write('<h1>변수 num1과 num2의 합은 '+ sum +'입니다.</h1>');
+    </script>
+</body>
+</html>

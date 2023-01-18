@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* main - 책을 펼쳤을 때의 크기 */
+main {
+    width: 600px;
+    height: 400px;
+    margin: 20px;
+    position: relative;
+    /* 자손인 요소의 위치 기준 */
+}
+
+
+/* section - 책의 종이 1장 크기 */
+section {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    /* 기준 : main */
+    top: 0;
+    right: 0;
+    transform-style: preserve-3d;
+    /* 앞뒷면을 함께 변형 */
+    transform-origin: left;
+    /* 변화(회전) 기준점 */
+    transition: all 1s ease-in-out;
+}
+
+/* 임의의 클래스 설정 - 페이지 넘김 */
+.next {
+    transform: rotateY(180deg);
+}
+
+/* section의 Z값 조정 */
+
+/* 섹션  (초기) - 수정 후
+#sec1 (0.1) - 유지
+#sec2 (0.2) - 1
+#sec3 (0.3) - 유지
+#sec4 (0.4) - -1
+*/
+/* section을 묶는 태그 사용 시 section의 순번 가상클래스를 사용할 수 있음 */
+section:nth-child(1) article {
+    background-color: orange;
+  }
+  
+  section:nth-child(2) {
+    z-index: 1
+  }
+  
+  section:nth-child(4) {
+    z-index: -1
+  }
+  
+  section:nth-child(4) article {
+    background-color: orange;
+  }
+
+
+/* article - section의 1쪽 */
+article {
+    position: absolute;
+    /* 기준 : section */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 5px solid orange;
+    box-sizing: border-box;
+    /* 영역의 크기에 border를 (패딩)포함 */
+    font: bold 64px/400px'HY헤드라인M';
+    /* font 한 줄 축약 : 두께 글자크기 /행간'글꼴'(비워놓으면 기본 글꼴) - 순서대로 쓰되, 글자크기와 글꼴은 반드시 입력 */
+    text-align: center;
+    backface-visibility: hidden;
+    /* 앞 뒷면 겹칠 때 뒷면이 안보이도록 설정 */
+    background-color: #ddd;
+}
+
+.back {
+    transform: rotateY(180deg);
+    background-color: #aaa;
+}
+
+.btn {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: orange;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    text-align: center;
+    font: 48px/40px'';
+    cursor: pointer;
+}

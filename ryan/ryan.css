@@ -1,0 +1,151 @@
+@charset "utf-8";
+
+*, *::after, *::before{
+  box-sizing: border-box;
+}
+body {
+  background: #313654;
+}
+
+.ryan {
+  position: relative;
+  margin: 50px auto;
+  width: 400px;
+  height: 380px;
+}
+
+.ryan .face {
+  position: absolute;
+  bottom: 0;
+  width: 400px;
+  height: 367px;
+  border-radius: 100%;
+  border: 10px solid #000;
+  background: #d59729;
+}
+
+.ryan .ear {
+  position: absolute;
+  top: 0;
+  width: 92px;
+  height: 92px;
+  border: 10px solid #000;
+  border-radius: 100%;
+  background: #d59729;
+}
+.ryan .ear.left {
+  left: 54px;
+}
+/* 다중클래스 사용 시 클래스 명 사이에 공백이 없도록 작성 */
+.ryan .ear.right {
+  right: 54px;
+}
+
+.ryan .eyebrow {
+  position: absolute;
+  top: 106px;
+  width: 78px;
+  height: 14px;
+  border-radius: 14px;
+  background: #000;
+  transition: all 0.2s;
+  /* 속성이 변할 때 0.2초에 걸려 부드럽게 변하게 함 */
+}
+
+.ryan .eyebrow.left {
+  left: 68px;
+}
+
+.ryan .eyebrow.right {
+  right: 68px;
+}
+
+.ryan .eye {
+  position: absolute;
+  top: 147px;
+  width: 26px;
+  height: 26px;
+  border-radius: 100%;
+  background: #000;;
+  transition: all 0.2s;
+}
+
+.ryan .eye.left {
+  left: 98px;
+}
+
+.ryan .eye.right {
+  right: 98px;
+}
+
+.ryan .nose {
+  position: absolute;
+  top: 184px;
+  left: 50%;
+  margin-left: -16px;
+  width: 32px;
+  height: 33px;
+  border-radius: 100%;
+  background: #000;
+  z-index: 2;
+  /* z-index로 입보다 코가 위로 올라오게 만듬 */
+}
+
+.ryan .mouth {
+  position: absolute;
+  top: 191px;
+  right: 73px;
+  width: 73px;
+  height: 68px;
+  border: 10px solid #000;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.ryan .mouth.left {
+  left: 127px;
+}
+
+.ryan .mouth.right {
+  right: 127px;
+}
+
+.ryan .mouth::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 33px;
+  background: #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  z-index: 1;
+}
+
+.ryan .mouth.left::before {
+  top: 2px;
+  left: 29px;
+}
+
+.ryan .mouth.right::before {
+  top: 2px;
+  right: 31px;
+}
+
+.ryan:hover .eyebrow.left {
+  top: 100px;
+  /* 왼쪽 눈썹 내려감 */
+}
+
+.ryan:hover .eyebrow.right {
+  -webkit-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+  /* 오른쪽 눈썹이 -10deg만큼 움직임 */
+}
+
+.ryan:hover .eye.right {
+  -webkit-transform: scale(2, 0.1);
+  transform: scale(2, 0.1);
+  /* 오른쪽 눈 크기가 가로는 2배, 세로는 0.1배로 변환함 */
+}
+
+/* before, after 가상요소를 활용 */

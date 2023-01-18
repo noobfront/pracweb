@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    width: 450px;
+    margin: 20px auto;
+}
+
+nav {
+  position: fixed;
+  /* 영역 차지하지 않고 scroll 고정 */
+  width: 450px;
+  top: 100px;
+  left: 20px;
+}
+
+.btn {
+  width: 20px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+nav > ul > li {
+  background-color: #aaa;
+  border-bottom: 2px solid #333;
+}
+
+nav a {
+  display: block;
+  font: bold 20px/50px '';
+  color: #fff;
+  padding-left: 20px;
+  position: relative;
+}
+
+.sub {
+  background-color: #666;
+}
+
+.sub a {
+  font: 16px/40px '';
+}

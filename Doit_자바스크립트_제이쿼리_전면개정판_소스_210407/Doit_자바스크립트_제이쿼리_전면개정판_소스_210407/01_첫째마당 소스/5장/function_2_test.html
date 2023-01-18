@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title> 함수 </title>
+	<script>
+		var color = ["white", "pink", "skyblue", "#FFB2F5"];
+		/*
+		color(0) : white
+		color(1) : pink
+		color(2) : skyblue
+		color(3) : #FFB2F5
+		*/
+		var i = 0;
+
+		function changeColor() {
+			i ++;
+			if(i >= color.length) {
+				i = 0;
+			} //i의 값이 4 이상이면 i에 0 대입
+			var bodyTag = document.getElementById("theBody");
+			bodyTag.style.backgroundColor = color[i];
+		}
+	</script>
+</head>
+
+<body id="theBody">
+	<button onclick="changeColor();">배경색 바꾸기</button>
+</body>
+
+</html>

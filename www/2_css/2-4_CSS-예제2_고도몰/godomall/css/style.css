@@ -1,0 +1,398 @@
+@charset "utf-8";
+
+
+
+/*브라우저 초기화,전체설정*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  float: left;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  color: #ddd;
+}
+
+#wrap {
+  min-width: 1110px;
+  /* min-width설정시 width:auto 자동설정 */
+}
+
+.behind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  left: -1px;
+  top: 0;
+  /* 넘치는 요소 안보이게, 브라우저 왼쪽 밖으로 이동 */
+}
+
+
+.hidden {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+}
+
+img {
+  vertical-align: top;
+}
+
+address {
+  font-style: normal;
+}
+
+small {
+  font-size: 100%
+}
+
+
+
+
+
+/*헤더 영역*/
+header {
+  width: 1110px;
+  height: 52px;
+  margin: 40px auto;
+}
+
+header > div {
+  float: left;
+}
+
+#logo {
+  width: 253px;
+  height: 52px;
+}
+
+#header_right {
+  width: 857px;
+  height: 52px;
+}
+
+
+
+.mr10 {
+  margin-right: 10px;
+}
+
+.mr16 {
+  margin-right: 16px;
+}
+
+.mr17 {
+  margin-right: 17px;
+}
+
+.pl10 {
+  padding-left: 10px;
+}
+
+.pl15 {
+  padding-left: 15px;
+}
+
+.pr10 {
+  padding-right: 10px;
+}
+
+.pr15 {
+  padding-right: 15px;
+}
+
+.bor-r {
+  border-right: 1px solid #ddd;
+}
+
+.bor-b-4 {
+  border-bottom: 4px solid #000;
+}
+
+
+
+
+
+#gnb {
+  float: right;
+  font-size: 12px;
+}
+
+
+/*주 메뉴*/
+.lnb {
+  width: 100%;
+  height: 40px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #000;
+}
+
+lnb > ul {
+  width: 1110px;
+  height: 40px;
+  margin: 0 auto;
+}
+
+.lnb > ul > li {
+  position: relative;
+}
+
+.lnb > ul > li:nth-child(1) .sub {
+  left: -10px;
+  width: calc(100% + 10px);
+  /*calc(calculate)는 계산식 - calc와 ()는 붙여쓰고 연산자는 반드시 띄어쓰기*/
+}
+
+.lnb > ul > li > a {
+  padding: 0 15px;
+  display: block;
+  line-height: 40px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+
+.sub {
+  position: absolute;
+  width: 100%;
+  background-color: #0006;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+  z-index: 1;
+  /*슬라이드 배너에 가려지지 않도록*/
+}
+
+.sub > li {
+  width: 100%;
+  clear: both;
+  /*float:left 적용 종료*/
+}
+
+.sub > li > a {
+  display: block;
+  line-height: 30px;
+  text-align: center;
+}
+
+.lnb > ul > li:hover .sub {
+  height: 150px;
+}
+
+
+
+/*컨텐츠 영역*/
+section {
+  width: 100%;
+  border-bottom: 1px solid #000;
+}
+
+#main_banner {
+  width: 100%;
+  height: 393px;
+  border-bottom: 4px solid #000;
+  background-position: center;
+  overflow: hidden;
+}
+
+#main_banner > ul {
+  width: 300%;
+  position: relative;
+  left: 0;
+  animation: slider 15s infinite;
+}
+
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+
+  30% {
+    left: 0;
+  }
+
+  33% {
+    left: -100%;
+  }
+
+  63% {
+    left: -100%;
+  }
+
+  66% {
+    left: -200%;
+  }
+
+  96% {
+    left: -200%;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+#main_banner > ul > li {
+  width: 33.33333%;
+  overflow: hidden;
+}
+
+#main_banner > ul > li > a {
+  display: block;
+  width: 2000px;
+  height: 393px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#main_banner > ul > li > a > img {
+  width: 100%;
+}
+
+
+
+
+#banner {
+  width: 1110px;
+  height: 130px;
+  margin: 20px auto;
+}
+
+#banner > ul > li:last-child {
+  margin: 0;
+}
+
+#banner > ul > li a {
+  transition: all 0.4s ease-in-out;
+}
+
+#banner > ul > li:hover a {
+  opacity: 0.6;
+}
+
+
+#best {
+  width: 1110px;
+  height: 334px;
+  margin: 20px auto;
+}
+
+#best > h3 {
+  height: 30px;
+  font-weight: normal;
+}
+
+.box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 100%;
+  background-color: #0006;
+  transition: all 0.5s ease-in-out;
+}
+
+.box > ul {
+  position: absolute;
+  width: 80%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.box > ul > li {
+  width: 100%;
+  text-align: center;
+}
+
+.box a {
+  color: #ddd;
+}
+
+.box a:hover {
+  color: #fff;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: bold;
+  display: block;
+  height: 40px;
+}
+
+#best > ul > li:hover {}
+
+
+
+
+/*하단 기업정보 영역*/
+footer {
+  width: 1110px;
+  height: 120px;
+  margin: 0 auto;
+}
+
+footer > div {
+  float: left;
+}
+
+#bottom_logo {
+  width: 253px;
+  height: 90px;
+  margin-top: 30px;
+}
+
+#footer_right {
+  width: 857px;
+  height: 120px;
+}
+
+#fnb {
+  width: 857px;
+  height: 30px;
+}
+
+#fnb > ul > li > a {
+  display: block;
+  line-height: 30px;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 0 10px;
+}
+
+#fnb > ul > li:nth-child(1) > a {
+  padding-left: 0;
+}
+
+#address {
+  width: 857px;
+  height: 90px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+#address a {
+  font-weight: bold;
+}
+
+#address address {
+  height: 60px;
+}

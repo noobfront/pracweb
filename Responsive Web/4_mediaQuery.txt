@@ -1,0 +1,83 @@
+	I. 미디어 쿼리 적용 방식
+https://github.com/scottjehl/Respond
+
+width:	기본설정						기본설정
+	768px 이상 추가 설정				1024px 미만 추가 설정
+	1024px 이상 추가 설정				768px 미만 추가 설정
+
+1. 링크 방식 - 공통 CSS를 작성 후에 미디어 쿼리 작성 (가장 많이 사용하는 방식)
+ 
+	/*모바일 (기본설정)*/				/*PC (기본설정)*/
+	* {						* {
+		margin: 0;					margin: 0;
+    		padding: 0;					padding: 0;
+    	}						}		
+	#wrap {						#wrap {
+		width: 100%;					width: 100%;
+	}						}
+	#wrap div {					#wrap div {
+		width: 100%;					width: 25%;
+	} 						}
+	
+	/*태블릿 (가로 768px 이상)*/				/*태블릿 (가로 1023px 이하)*/
+	@media all and (min-width:768px) {			@media all and (max-width:1023px) {
+		#wrap div {					#wrap div {
+			width:50%;					width:50%;
+		}						}
+	}						}
+
+	/*PC (가로 1024px 이상)*/				/*모바일 (가로 767px 이하)*/
+	@media all and (min-width:1024px) {			@media all and (max-width:767px) {
+		#wrap div {					#wrap div {
+			width:25%;					width:100%;
+		}						}
+	}						}
+
+
+
+2. 개별 링크 방식 - 미디어별 CSS를 별도 작성 (CSS가 단순할 때 사용)
+
+	<link rel="stylesheet" media="all and (min-width:320px)" href="style320px.css">
+	<link rel="stylesheet" media="all and (min-width:768px)" href="style768px.css">
+	<link rel="stylesheet" media="all and (min-width:1024px)" href="style1024px.css">
+
+
+
+3. 임포트 방식 - CSS파일 내에서 CSS를 불러오는 방식 (CSS가 단순할 때 사용)
+	
+	@import url ("style320px.css") all and (min-width:320px);
+	@import url ("style768px.css") all and (min-width:768px);
+	@import url ("style1024px.css") all and (min-width:1024px);
+
+
+
+
+
+	II. 뷰포트 (화면에서 실제 내용이 표시되는 영역)
+
+1. 반응형 웹의 기본 메타 태그
+
+<meta name="viewport" 
+content="width=device-width,	/* 뷰포트 너비 */
+initial-scale=1,			/* 초기 배율 */
+minimum-scale=1,			/* 최소 축소 비율 */
+maximum-scale=1,			/* 최대 확대 비율 */
+user-scalable=no">			/* 확대/축소 여부 */
+
+
+
+2. 표준 방식의 뷰포트
+
+<head>
+<style>
+@viewport {
+width:device-width;			/* 메타 태그 width 속성과 동일 */
+zoom:1;				/* 메타 태그 initial-scale 속성과 동일 */
+min-zoom:1;			/* 메타 태그 minimum-scale 속성과 동일 */
+max-zoom:1;			/* 메타 태그 maximum-scale 속성과 동일 */
+user-zoom:zoom;			/* 메타 태그 user-scalable 속성과 동일 */
+}
+</style>
+</head>
+
+Emmet 단축 키 = meta:vp

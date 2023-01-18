@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>addClass/removeClass</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous">
+    // integrity와 crossorigin은 해킹방지 설정
+  </script>
+  <link rel="stylesheet" href="css/popup.css">
+  <link rel="stylesheet" href="css/class.css">
+</head>
+
+<body>
+  <div id="wrap">
+    <section>
+      <h2>레이어 팝업</h2>
+      <ul class="btn">
+        <li class="on">addClass</li>
+        <li class="off">removeClass</li>
+        <li class="toggle">toggleClass</li>
+      </ul>
+      <div class="popup">
+        <div class="photo">
+          <img src="img/back.jpg" alt="꽃을 든 손 이미지">
+        </div>
+        <div class="close">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="js/class.js"></script>
+</body>
+
+</html>

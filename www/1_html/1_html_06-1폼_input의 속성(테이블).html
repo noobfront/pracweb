@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1_html_06-1폼_input의 속성(테이블)</title>
+</head>
+<body>
+  <table border="1">
+      <caption>&lt;input 속성&gt;의 종류와 설명</caption>
+    <thead>
+        <tr>
+        <th scope="col">종류</th>
+        <th scope="col">설명</th>
+        </tr>
+    </thead>
+    <tbody>
+       <tr>
+           <th rowspan="3" scope="row">text</th>
+           <td>한 줄 글 입력 상자</td>
+       </tr>
+        <tr>
+           <td>size 속성은 글상자의 가로길이</td>
+        </tr>
+        <tr>
+           <td>maxlength 속성은 최대 글자수</td>
+        <tr>
+           <th scope="row">password</th>
+           <td>비밀번호 입력 상자, 입력된 내용은 &lsquo;&bull;&rsquo;’로 표시</td>
+           <!--하위버전을 고려한 코드-->
+       </tr>
+        <tr>
+           <th scope="row">placeholder</th>
+           <td>hint를 보여줄 수 있다.</td>
+       </tr>
+           <th rowspan="5" scope="row">radio</th>
+           <tr>
+           <td>선택 버튼</td>
+           </tr>
+           <tr>
+           <td>여러 개의 항목 중 하나만 선택 가능</td>
+           </tr>
+           <tr>
+               <td>name값이 동일함</td>
+           </tr>
+           <tr>
+           <td>value는 체크시 실제 전송되는 값</td>
+           </tr>
+        <tr>
+           <th rowspan="3" scope="row">checkbox</th>
+           <td>체크 박스</td>
+       </tr>
+        <tr>
+           <td>다중 선택 기능</td>
+       </tr>
+        <tr>
+           <td>name값이 서로 다름</td>
+       </tr>
+       <tr>
+           <th rowspan="2" scope="row">submit</th>
+           <td>전송 버튼</td>
+       </tr>
+       <tr>
+           <td>value속성은 버튼에 표시할 글자</td>
+       </tr>
+       <tr>
+           <th scope="row">reset</th>
+           <td>초기화 버튼</td>
+       </tr>
+        <tr>
+           <th scope="row">button</th>
+           <td>일반 버튼</td>
+       </tr>
+        <tr>
+           <th rowspan="2" scope="row">image</th>
+           <td>이미지 버튼</td>
+           <tr>
+           <td>alt 속성은 반드시 입력(웹표준)</td>
+       </tr>
+        <tr>
+           <th scope="row">file</th>
+           <td>파일 첨부</td>
+       </tr>
+        <tr>
+           <th rowspan="2" scope="row">hidden</th>
+           <td>화면에 표시되지 않는 속성</td>
+       </tr>
+        <tr>
+           <td>사용자에게 노출할 필요가 없는 데이터에 지정</td>
+       </tr>
+    </tbody>
+  </table>
+</body>
+</html>

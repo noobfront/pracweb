@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+  /* img요소의 기본 여백 제거 */
+  width: 100%;
+}
+
+h2,
+h3 {
+  margin: 20px;
+}
+
+.slide {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.img {
+  width: 500%;
+  position: relative;
+  left: 0;
+}
+
+.img>li {
+  width: 20%;
+  float: left;
+}
+
+.arrow {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  top: calc(50% - 30px / 2);
+}
+
+.prev,
+.next {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 30px;
+}
+
+.prev img {
+  transform: rotate(90deg);
+}
+
+.next {
+  right: 30px;
+}
+
+.next img {
+  transform: rotate(-90deg);
+}
+
+.btn {
+  width: calc(20px * 5 + 20px * 4);
+  height: 20px;
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% - (20px * 5 + 20px * 4) / 2);
+}
+
+.btn>li {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  float: left;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.btn>li:last-child {
+  margin: 0;
+}
+
+li.check {
+  background-color: pink;
+}

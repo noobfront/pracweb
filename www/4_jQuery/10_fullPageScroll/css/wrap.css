@@ -1,0 +1,10 @@
+#wrap {
+  height: 100vh;
+  overflow: hidden;
+}
+
+main {
+  height: 400%;
+  position: relative;
+  top: 0;
+}
