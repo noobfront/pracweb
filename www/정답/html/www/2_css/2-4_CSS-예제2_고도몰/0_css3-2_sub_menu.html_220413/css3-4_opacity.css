@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+  /*img태그의 기본여백 제거*/
+}
+
+h2,
+h3 {
+  margin-top: 20px;
+}
+
+aside {
+  width: 1110px;
+  margin: 0 auto;
+}
+
+aside > ul {
+  /*width:100% 기본*/
+  /*height는 자동(자녀요소의 크기가 정해져 있을 때에는 그 크기를 따름)*/
+}
+
+aside > ul > li {
+  /*height는 자동(자녀요소의 크기가 정해져 있을 때에는 그 크기를 따름)*/
+  float: left;
+  /*float: left설정시 width:100% 삭제 - position:absolute와 비슷*/
+  margin-right: 10px;
+  background-color: #000;
+}
+
+aside > ul > li:nth-child(4) {
+  margin: 0;
+}
+
+aside > ul > li > a {
+  transition: all 0.2s ease-in-out;
+}
+
+aside > ul > li > a:hover {
+  opacity: 0.4;
+}

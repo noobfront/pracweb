@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  position: relative;
+  /*위치값 변경 적용을 위해 필수 지정*/
+}
+
+h3 {
+  text-align: center;
+  line-height: 50px;
+}
+
+li p {
+  margin: 10px;
+}
+
+
+
+
+
+
+/****** from ~ to ******/
+.to {
+  background-color: #ddd;
+  animation-name: slide;
+  /*애니메이션 이름*/
+  animation-duration: 1s;
+  /*애니메이션 실행 시간*/
+  animation-delay: 1s;
+  /*애니메이션 지연 시간: 반복될 경우에는 처음 1회만 지연*/
+  animation-iteration-count: infinite;
+  /*애니메이션 실행 횟수*/
+  animation-direction: alternate;
+  /*애니메이션 실행 방향: 순방향 후 역방향 (기본설정은 normal)*/
+  animation-timing-function: ease-in-out;
+  /*애니메이션 형식: transition의 속성과 같음 - 주로 생략*/
+}
+
+/*animation의 이름과 @keyframes의 이름을 같게 하여 연결*/
+@keyframes slide {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 200px;
+  }
+}
+
+
+
+
+
+
+/****** 0% ~ 100% ******/
+.per {
+  animation: color 10s infinite;
+  /*한 줄 축약: 이름 실행시간 실행횟수*/
+}
+
+@keyframes color {
+  0% {
+    left: 0;
+    background-color: purple;
+  }
+
+  15% {
+    left: 0;
+    background-color: purple;
+  }
+
+  20% {
+    left: 100px;
+    background-color: red;
+  }
+
+  35% {
+    left: 100px;
+    background-color: red;
+  }
+
+  40% {
+    left: 200px;
+    background-color: yellow;
+  }
+
+  55% {
+    left: 200px;
+    background-color: yellow;
+  }
+
+  60% {
+    left: 300px;
+    background-color: green;
+  }
+
+  75% {
+    left: 300px;
+    background-color: green;
+  }
+
+  80% {
+    left: 400px;
+    background-color: blue;
+  }
+
+  95% {
+    left: 400px;
+    background-color: blue;
+  }
+
+  100% {
+    left: 0;
+    background-color: purple;
+  }
+}

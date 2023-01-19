@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+html {
+  font-size: 24px;
+}
+
+section {
+  font-size: 32px;
+}
+
+.font-size {
+  color: red;
+}
+
+.px {
+  font-size: 16px;
+}
+
+.percent {
+  font-size: 100%;
+}
+
+.em {
+  font-size: 1em;
+}
+
+.rem {
+  font-size: 1rem;
+}
+
+
+
+/****** 상대값 사용 예시 ******/
+
+.ex {
+  font-size: 12px;
+}
+
+.ex h3 {
+  margin-top: 50px;
+}
+
+.ex ul {
+  background-color: aquamarine;
+  padding: 20px;
+}
+
+.ex li {
+  list-style: none;
+}
+
+.main {
+  /*제목의 행간은 1 ~ 1.2 권장*/
+  font: bold 2.4em/1.2 '맑은 고딕';
+  text-align: center;
+  letter-spacing: -0.1em;
+  /*자간 -10%*/
+}
+
+.sub {
+  /*부제의 행간은 1.2 ~ 1.4 권장*/
+  font: 1.4em/1.4 '나눔명조';
+  text-align: center;
+}
+
+.body {
+  /*본문의 행간은 1.5 ~ 1.8 권장*/
+  font: 1em/1.8 '맑은 고딕';
+  margin: 20px 0;
+  text-align: justify;
+  /*글자정렬: 양편정렬*/
+}
+
+.note {
+  /*주석의 행간은 1.2 ~ 1.5 권장*/
+  font: 0.8em/1.2 '맑은 고딕';
+}

@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+/* 브라우저 초기화 및 전체 설정 */
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 32px;
+  color: #fff;
+}
+
+li {
+  float: left;
+  list-style: none;
+  margin: 0 10px;
+  /*값을 두 개 입력하면 1.상하 2.좌우*/
+  /*값을 1개 입력하면 4방향 공통적용, 2개 이상 입력하면 위쪽부터 시계방향 - 1.위 2.오른쪽 3.아래 4.왼쪽(미입력 값은 대칭과 동일)*/
+}
+
+#header {
+  width: 1000px;
+  height: 200px;
+  background-color: red;
+}
+
+#top {
+  width: 1000px;
+  height: 150px;
+  background-color: #ff5353;
+}
+
+#logo {
+  width: 300px;
+  height: 150px;
+  background-color: #ffa9a9;
+  float: left;
+  /*왼쪽으로 이어붙이기 - 가로분할되는 모든 요소에 적용*/
+}
+
+#right {
+  width: 700px;
+  height: 150px;
+  background-color: #d35252;
+  float: left;
+  /*왼쪽으로 이어붙이기 - 가로분할되는 모든 요소에 적용*/
+}
+
+#gnb {
+  width: 600px;
+  height: 60px;
+  background-color: #ffd1d1;
+  float: right;
+  /*오른쪽으로 붙이기*/
+}
+
+#lnb {
+  width: 1000px;
+  height: 50px;
+  background-color: #c70000;
+}
+
+#contentwrap {
+  width: 1000px;
+  height: 400px;
+  background-color: green;
+}
+
+#main_banner {
+  width: 1000px;
+  height: 200px;
+  background-color: #72ff72;
+}
+
+#banner {
+  width: 1000px;
+  height: 100px;
+  background-color: #57d357;
+}
+
+#best {
+  width: 1000px;
+  height: 100px;
+  background-color: #158815;
+}
+
+#footer {
+  width: 1000px;
+  height: 150px;
+  background-color: blue;
+}
+
+#bottom_logo {
+  width: 300px;
+  height: 150px;
+  background-color: #0000d0;
+  float: left;
+  /*왼쪽으로 이어붙이기 - 가로분할되는 모든 요소에 적용*/
+}
+
+#bottom {
+  width: 700px;
+  height: 150px;
+  background-color: #3d3dff;
+  float: left;
+  /*왼쪽으로 이어붙이기 - 가로분할되는 모든 요소에 적용*/
+}
+
+#fnb {
+  width: 700px;
+  height: 50px;
+  background-color: #1b1baa;
+}
+
+#address {
+  width: 700px;
+  height: 100px;
+  background-color: #5e5ece;
+}

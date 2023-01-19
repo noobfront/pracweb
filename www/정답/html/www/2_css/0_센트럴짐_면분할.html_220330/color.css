@@ -1,0 +1,229 @@
+@charset "utf-8";
+
+/****** 브라우저 초기화 및 전체 설정 ******/
+* {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  /*글자색*/
+  text-align: center;
+  /*글자-가로정렬: 중앙정렬*/
+}
+
+li {
+  list-style: none;
+  /*점, 숫자 등 목록의 장식 제거*/
+  float: left;
+}
+
+
+
+/****** 헤더 영역 ******/
+#header {
+  width: 1000px;
+  height: 120px;
+  background-color: red;
+}
+
+/*
+복합선택자(그룹/결합)
+1. A B = A의 자손(자녀,손자녀,증손,고손)인 B
+예) body div = body태그 하위의 모든 div
+2. A > B = A의 자녀인 B
+예) body > div = body태그의 자녀요소인 div(즉, #wrap)만 해당
+3. A ~ B = A의 동생인 B
+예) #header ~ div = #contentwrap과 #footer가 해당
+4. A + B = A의 바로 다음 형제인 B
+예) #header + div = #contentwrap만 해당
+5. 두 개 이상의 선택자를 호출할 때에는 콤마(,)로 구분
+*/
+
+/*#header의 자녀요소인 div를 호출*/
+#header > div {
+  float: left;
+}
+
+#header_left {
+  width: 400px;
+  height: 120px;
+  background-color: #ac3636;
+}
+
+#left_top {
+  width: 400px;
+  height: 60px;
+  background: #ffd9d9;
+}
+
+#left_lnb {
+  width: 400px;
+  height: 60px;
+  background-color: #710000;
+}
+
+#left_lnb > ul {
+  width: 400px;
+  height: 60px;
+  /*li의 합이 ul의 크기와 일치하므로 생략 가능*/
+}
+
+#left_lnb > ul > li {
+  /*border-width: 1px;*/
+  /*외곽선 두께*/
+  /*border-style: solid;*/
+  /*외곽선 종류*/
+  /*border-color: blue;*/
+  /*외곽선 색상*/
+  border: 1px solid blue;
+  /*외곽선: 두께 종류 색상*/
+  /*border는 width와 height에 불포함(기본설정)*/
+  width: 78px;
+  height: 58px;
+}
+
+#left_lnb > ul > li > a {
+  display: block;
+  /*크기를 설정할 수 없는 인라인요소에 크기를 적용하기 위해 블록요소로 변환 - 블록요소는 width:100% 자동*/
+  height: 100%;
+  background-color: red;
+}
+
+#logo {
+  width: 204px;
+  height: 120px;
+  background-color: #d32626;
+}
+
+#logo h1 {
+  /*블록요소이므로 width:100% 기본설정*/
+  height: 100%;
+  /*부모요소인 #logo의 높이에 대하여 100%*/
+}
+
+#logo a {
+  display: block;
+  /*크기를 설정할 수 없는 인라인요소에 크기를 적용하기 위해 블로요소로 변환 - 블록요소는 width:100%*/
+  height: 100%;
+  /*부모요소인 h1태그의 높이에 대하여 100%*/
+  background-color: #ff5673;
+}
+
+#header_right {
+  width: 396px;
+  height: 120px;
+  background-color: #ac3636;
+}
+
+#right_top {
+  width: 396px;
+  height: 60px;
+  background-color: #ffd9d9;
+}
+
+#gnb {
+  width: 264px;
+  height: 20px;
+  background-color: #ff7171;
+  float: right;
+}
+
+#gnb > ul {
+  width: 264px;
+  height: 20px;
+}
+
+#gnb > ul > li {
+  width: 64px;
+  height: 18px;
+  border: 1px solid blue;
+}
+
+#gnb > ul > li > a {
+  display: block;
+  /*크기를 설정할 수 없는 인라인요소에 크기를 적요하기 위해 블록요소로 변환 - 블록요소는 width:100% 기본*/
+  height: 100%;
+  background-color: red;
+}
+
+#right_lnb {
+  width: 396px;
+  height: 60px;
+  background-color: #710000;
+}
+
+#right_lnb > ul {
+  width: 396px;
+  height: 60px;
+  /*li의 합의 ul과 같으므로 생략가능*/
+}
+
+#right_lnb > ul > li {
+  border: 1px solid blue;
+  /*border는 width와 height에 불포함*/
+  width: 64px;
+  height: 58px;
+}
+
+#right_lnb > ul > li > a {
+  display: block;
+  /*크기를 설정할 수 없는 인라인요소에 크기를 적용하기 위해 블록요소로 변환 - 블록요소는 width:100% 자동*/
+  height: 100%;
+  background-color: red;
+}
+
+
+
+
+/****** 콘텐츠 영역 ******/
+#contentwrap {
+  width: 1000px;
+  height: 667px;
+  background-color: green;
+}
+
+
+
+
+/****** 푸터 영역 ******/
+#footer {
+  width: 1000px;
+  height: 100px;
+  background-color: blue;
+}
+
+#fnb {
+  width: 1000px;
+  height: 50px;
+  background-color: #00008d;
+}
+
+#fnb > ul {
+  width: 1000px;
+  height: 50px;
+  /*li의 합이 ul의 크기와 같으므로 생략 가능*/
+}
+
+#fnb > ul > li {
+  width: 198px;
+  height: 48px;
+  border: 1px solid red;
+}
+
+#fnb > ul > li > h2 {
+  height: 100%;
+  /*부모요소인 li의 높이에 대하여 100%*/
+}
+
+#fnb > ul > li a {
+  display: block;
+  /*크기를 설정할 수 없는 인라인요소에 크기를 지정하기 위해 블록요소로 변환 - 블록요소는 width:100% 자동*/
+  height: 100%;
+  /*부모요소인 li 혹은 h2의 높이에 대하여 100%*/
+  background-color: blue;
+}
+
+#address {
+  width: 1000px;
+  height: 50px;
+  background-color: #3a3aff;
+}

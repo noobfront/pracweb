@@ -1,0 +1,262 @@
+@charset "utf-8";
+
+/****** 기본 설정 ******/
+* {
+  margin: 0;
+  padding: 0;
+  color: #000;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+
+
+/****** 공통 설정 ******/
+section {
+  margin-top: 50px;
+  min-width: 1110px;
+}
+
+h1 {
+  width: 1110px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+nav {
+  /*** 가로 꽉 차게, 세로 임의, 상단 흐린 경계선, 하단 진한 경계선 ***/
+  width: 100%;
+  height: 40px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #000;
+}
+
+nav > ul {
+  /*** 폭 설정, 가로 중앙 정렬, 높이 ***/
+  width: 1110px;
+  height: 40px;
+  margin: 0 auto;
+}
+
+nav > ul > li {
+  /*** 가로 배열 ***/
+  float: left;
+}
+
+nav > ul > li > a {
+  /*** 글자 스타일 및 간격 설정 ***/
+  display: block;
+  /*크기적용을 위해 블록요소로 변환*/
+  font-weight: bold;
+  line-height: 40px;
+  padding: 0 20px;
+}
+
+aside {
+  /*** 크기지정, 배경이미지 연결, 중앙, 하단 경계선 ***/
+  width: 100%;
+  height: 393px;
+  background-image: url(../images/image_slide_1.jpg);
+  background-position: center;
+  border-bottom: 4px solid #000;
+}
+
+
+
+
+
+/****** display (직계 하위 메뉴) 설정 ******/
+.sub_li > ul > li {
+  position: relative;
+  /*.sub의 위치 기준*/
+  z-index: 1;
+}
+
+.sub_li .sub {
+  width: 100%;
+  height: 120px;
+  background-color: rgba(0, 0, 0, 0.2);
+  /*rgba(red,green,blue,opacity)*/
+  display: none;
+  position: absolute;
+  /*부모요소인 li에 대한 위치값*/
+  left: 0;
+  top: 40px;
+}
+
+.sub_li .sub li {
+  line-height: 30px;
+  text-align: center;
+}
+
+.sub_li .sub a {
+  display: block;
+  height: 100%;
+}
+
+.sub_li > ul > li:hover .sub {
+  display: block;
+}
+
+#sub_li aside {
+  position: relative;
+  /*동적인 요소가 위치할 때 반드시 포지션을 설정 - Z값이 높아짐*/
+}
+
+
+
+
+
+
+
+
+/****** display (하위 메뉴 전체) 설정 ******/
+.sub_ul > ul > li {
+  position: relative;
+  /*.sub의 위치기준*/
+  z-index: 1;
+  /*z-index는 position설정 후 사용가능*/
+}
+
+.sub_ul .sub {
+  position: absolute;
+  /*조상 중 position 속성을 가진 li 기준의 위치값*/
+  width: 100%;
+  left: 0;
+  top: 40px;
+  background-color: #f004;
+  /*red,green,blue,opacity*/
+  display: none;
+}
+
+.sub_ul .sub li {
+  line-height: 30px;
+  text-align: center;
+}
+
+.sub_ul .sub a {
+  display: block;
+  height: 100%;
+}
+
+/*** .sub_ul>ul 호버하면 .sub 보이도록 ***/
+.sub_ul > ul:hover .sub {
+  display: block;
+}
+
+#sub_ul aside {
+  position: relative;
+  /*동적인 요소가 위치할 때 반드시 포지션을 설정 - Z값이 높아짐*/
+}
+
+
+
+
+
+/****** display (하위 메뉴와 배경 상자) 설정 ******/
+.subBox {
+  position: relative;
+  /*.box의 위치 기준*/
+}
+
+.subBox .box {
+  /*** 크기 지정 ***/
+  background-color: #fff;
+  height: 130px;
+  border-bottom: 1px solid #000;
+}
+
+.subBox > ul > li {
+  position: relative;
+  /*ul.sub의 위치 기준*/
+}
+
+.subBox .sub {
+  /*** 평소에 보이지 않게 ***/
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  left: 0;
+  top: 40px;
+  display: none;
+}
+
+.subBox .sub li {
+  line-height: 30px;
+  text-align: center;
+}
+
+.subBox .sub a {
+  display: block;
+  height: 100%;
+}
+
+/*** .subBox를 호버했을 때 .sub가 보이도록 ***/
+.subBox:hover .sub {
+  display: block;
+}
+
+#subBox aside {
+  position: relative;
+}
+
+
+
+
+/****** slide down (css3) 설정 ******/
+/*** .sub의 높이를 0으로, 넘치는 요소는 보이지 않게, transition 설정 ***/
+.slideDown {
+  /*.box의 위치 기준*/
+  position: relative;
+  z-index: 1;
+}
+
+.slideDown .box {
+  background-color: #fff;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  border-bottom: 1px solid #000;
+}
+
+.slideDown > ul > li {
+  position: relative;
+  /*ul.sub의 위치 기준*/
+}
+
+.slideDown .sub {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 40px;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+.slideDown .sub li {
+  line-height: 30px;
+  text-align: center;
+}
+
+.slideDown .sub a {
+  display: block;
+  height: 100%;
+}
+
+/*** 특정 위치를 hover하면 .sub의 높이를 원래대로 ***/
+.slideDown:hover .sub {
+  height: 130px;
+}
+
+#slideDown aside {
+  position: relative;
+}
