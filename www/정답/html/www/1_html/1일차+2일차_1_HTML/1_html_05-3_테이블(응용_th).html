@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>1_html_05-3_테이블(응용_th)</title>
+</head>
+
+<body>
+    <h2>공연요금 안내</h2>
+    <table border="1">
+        <caption>공연요금표</caption>
+        <!--caption은 table의 제목, table영역의 맨 위에 입력-->
+        <tr>
+            <th colspan="3">공연요금</th>
+            <!--th는 td 중에서 제목을 표현하는 태그, 글자 중앙 정렬, 굵은 글씨-->
+        </tr>
+        <tr>
+            <th>구분</th>
+            <th>S석</th>
+            <th>VIP</th>
+        </tr>
+        <tr>
+            <th>성인</th>
+            <td>40,000원</td>
+            <td>60,000원</td>
+        </tr>
+        <tr>
+            <th>청소년</th>
+            <td>30,000원</td>
+            <td>50,000원</td>
+        </tr>
+        <tr>
+            <th>소인</th>
+            <td colspan="2">미취학 아동 일반요금의 50%</td>
+        </tr>
+        <tr>
+            <th rowspan="2">공연시간</th>
+            <td>1회</td>
+            <td>13:00 ~ 15:00</td>
+        </tr>
+        <tr>
+            <td>2회</td>
+            <td>17:00 ~ 19:00</td>
+        </tr>
+    </table>
+</body>
+
+</html>

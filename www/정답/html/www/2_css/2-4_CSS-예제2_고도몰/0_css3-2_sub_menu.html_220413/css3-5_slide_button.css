@@ -1,0 +1,113 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+  /*img태그의 기본여백 제거*/
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+article {
+  width: 1110px;
+  margin: 20px auto;
+}
+
+h3 {
+  height: 30px;
+  font-weight: normal;
+}
+
+article > ul {
+  overflow: hidden;
+  /*영역을 벗어난 요소 보이지 않게, 높이 자동 계산*/
+  /*li에 정의하는 것도 Good*/
+}
+
+article > ul > li {
+  float: left;
+  width: 265px;
+  height: 304px;
+  position: relative;
+  /*자녀요소인 .box의 위치기준*/
+}
+
+/*** 형제요소 중 홀수번째 ***/
+article > ul > li:nth-child(odd) {
+  margin-right: 17px;
+}
+
+/*** 형제요소 중 짝수번째 ***/
+article > ul > li:nth-child(even) {
+  margin-right: 16px;
+}
+
+/*** 형제요소 중 막내 ***/
+article > ul > li:last-child {
+  margin: 0;
+}
+
+article > ul > li:hover .box {
+  top: 0;
+}
+
+.box {
+  /*** 부모요소인 li의 크기와 같은 크기, 위치는 li의 아래, 색상은 반투명 ***/
+  position: absolute;
+  /*크기와 위치 모두 조상요소중 position속성을 가진요소를 기준*/
+  /*자녀요소인 ul의 위치기준*/
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 100%;
+  background-color: #0003;
+  /*Hex코드 4자리 혹은 8자리 사용시 #redGreenBlueOpacity*/
+  transition: all 0.5s ease-in-out;
+}
+
+.box > ul {
+  text-align: center;
+  /*** 기본 크기 설정, .box의 중앙으로 이동 ***/
+  width: 80%;
+  overflow: hidden;
+  /*높이 자동 계산*/
+  position: absolute;
+  /*조상요소 중 position속성을 가진 요소를 기준*/
+
+  /*** 기준요소의 중앙으로 기준점을 이동 ***/
+  left: 50%;
+  top: 50%;
+
+  /*** 자신의 크기의 절반만큼 거꾸로 이동 ***/
+  transform: translate(-50%, -50%);
+}
+
+.box a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+.box a:hover {
+  color: #fff;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 40px;
+}

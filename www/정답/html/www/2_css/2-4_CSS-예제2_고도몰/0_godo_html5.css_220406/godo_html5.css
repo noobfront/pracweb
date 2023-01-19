@@ -1,0 +1,230 @@
+@charset "utf-8";
+
+/****** 브라우저 초기화 및 전체 설정 ******/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  float: left;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  color: #ddd;
+}
+
+img {
+  vertical-align: top;
+  /*글자의 속성을 가진 img태그의 기본 여백 제거*/
+}
+
+address {
+  font-style: normal;
+}
+
+small {
+  font-size: 100%;
+}
+
+.hidden {
+  /*** 시각적으로 보이지 않게 ***/
+  visibility: hidden;
+
+  /*** 영역의 크기를 0으로 ***/
+  width: 0;
+  height: 0;
+
+  /*** 콘텐츠의 크기를 0으로 ***/
+  font-size: 0;
+  line-height: 0;
+}
+
+
+/****** 클래스를 이용한 스타일 지정 ******/
+.mr10 {
+  margin-right: 10px;
+}
+
+.mr16 {
+  margin-right: 16px;
+}
+
+.mr17 {
+  margin-right: 17px;
+}
+
+.pl10 {
+  padding-left: 10px;
+}
+
+.pl15 {
+  padding-left: 15px;
+}
+
+.pr10 {
+  padding-right: 10px;
+}
+
+.pr15 {
+  padding-right: 15px;
+}
+
+.bor-r {
+  border-right: 1px solid #ddd;
+}
+
+.bor-b-4 {
+  border-bottom: 4px solid #000;
+}
+
+
+
+
+
+/****** 헤더 영역 ******/
+header {
+  width: 1110px;
+  height: 52px;
+  margin: 40px auto;
+}
+
+header > div {
+  float: left;
+}
+
+#logo {
+  width: 253px;
+  height: 52px;
+}
+
+#header_right {
+  width: 857px;
+  height: 52px;
+}
+
+#gnb {
+  float: right;
+  font-size: 12px;
+}
+
+
+
+
+
+/****** 주 메뉴 ******/
+.lnb {
+  width: 100%;
+  height: 40px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #000;
+}
+
+.lnb > ul {
+  width: 1110px;
+  height: 40px;
+  margin: 0 auto;
+}
+
+.lnb > ul > li > a {
+  display: block;
+  line-height: 40px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+
+
+
+
+/****** 콘텐츠 ******/
+section {
+  width: 100%;
+  border-bottom: 1px solid #000;
+}
+
+#main_banner {
+  min-width: 1110px;
+  /*min-width설정시 width:100% 자동*/
+  height: 393px;
+  background-image: url(../images/image_slide_1.jpg);
+  background-position: center;
+}
+
+#banner {
+  width: 1110px;
+  height: 130px;
+  margin: 20px auto;
+}
+
+#best {
+  width: 1110px;
+  height: 334px;
+  margin: 20px auto;
+}
+
+#best > h3 {
+  height: 30px;
+  font-weight: normal;
+}
+
+
+
+
+
+/****** 푸터 영역 ******/
+footer {
+  width: 1110px;
+  height: 120px;
+  margin: 0 auto;
+
+}
+
+footer > div {
+  float: left;
+}
+
+#bottom_logo {
+  width: 253px;
+  height: 90px;
+  margin-top: 30px;
+}
+
+#footer_right {
+  width: 857px;
+  height: 120px;
+}
+
+#fnb {
+  width: 857px;
+  height: 30px;
+}
+
+#fnb a {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+#address {
+  width: 857px;
+  height: 90px;
+  font-size: 12px;
+}
+
+#address a {
+  font-weight: bold;
+}
+
+#address address {
+  line-height: 1.5;
+  height: 60px;
+}
