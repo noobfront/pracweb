@@ -1,2 +1,45 @@
 {
+  "files.exclude": {
+
+
+
+    // Unity 에서 생성되는 파일들
+
+    "[Bb]uild": true,
+
+    "[Tt]emp": true,
+
+    "[Oo]bj": true,
+
+    "[Ll]ibrary": true,
+
+    "[Pp]roject[Ss]ettings": true,
+
+    "**/*.meta": true,
+
+    "**/*.apk": true,
+
+    "**/sysinfo.txt": true,
+
+    "**/*.unity": true,
+
+
+
+    // OS단에서 생성되는 파일들.
+
+    "[Ii]con?": true,
+
+    "**/.DS_Store*": true,
+
+    "**/._*": true,
+
+    "**/.[Tt]rashes": true,
+
+    "**/[Tt]umbs.db": true,
+
+    "**/.[Ss]potlight-V100": true,
+
+    "**/ehthumbs.db": true
+
+  }
 }
