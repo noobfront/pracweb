@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-	<meta charset="UTF-8">
-	<title>연습문제 3</title>
+  <meta charset="UTF-8">
+  <title>연습문제 3</title>
+  <style>
+    table {
+      border: 1px solid black;
+      border-collapse: collapse;
+      caption-side: bottom;
+    }
+
+    td,
+    th {
+      border: 1px solid black;
+      padding: 10px;
+    }
+
+    .heading {
+      background-color: #eee;
+    }
+  </style>
 </head>
+
 <body>
-  <table border="1">
+  <table>
     <caption>2019 국민 독서실태</caption>
+    <col class="heading">
     <thead>
-      <tr>
+      <tr class="heading">
         <th>구분</th>
         <th>성인</th>
         <th>독서자</th>
@@ -29,8 +49,9 @@
         <th>오디오북</th>
         <td>0.2권</td>
         <td>5.5권</td>
-      </tr>      
+      </tr>
     </tbody>
   </table>
 </body>
+
 </html>
