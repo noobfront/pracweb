@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>구구단 - for문</title>
 	<link rel="stylesheet" href="css/gugudan.css">
 </head>
+
 <body>
 	<h1>구구단</h1>
 	<script>
@@ -15,12 +17,14 @@
 			document.write("<div>");
 			document.write("<h3>" + i + "단</h3>");
 			for (j = 1; j <= 9; j++) {
-				document.write(i +" X " + j + " = " + i*j + "<br>");
+				document.write(i + " X " + j + " = " + i * j + "<br>");
 			}
 			document.write("</div>");
 
-      if(i === 3) break;
+			if (i === 3) break;
+			//i의 값이 3이면 break문 실행
 		}
 	</script>
 </body>
+
 </html>
